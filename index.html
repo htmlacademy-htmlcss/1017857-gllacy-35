@@ -4,9 +4,60 @@
     <meta charset="utf-8">
     <title>HTML Academy: Глейси</title>
   </head>
-  <body>
-
-    <p>Репозиторий создан для обучения на профессиональном онлайн‑курсе «<a href="https://htmlacademy.ru/intensive/htmlcss">HTML и CSS. Профессиональная вёрстка сайтов</a>».</p>
-
+  <body class="page">
+    <header class="page-header">
+      <nav class="main-nav">
+        <a href="index.html" class="logo">
+          <img src="#" alt="Логотип &laquo;GllacyShop&raquo;" class="logo__img">
+        </a>
+        <ul class="site-nav">
+          <li class="site-nav__item">
+            Каталог
+            <ul class="catalog-nav-list">
+              Новинки
+              <li class="catalog-nav-list__item">
+                <a href="#" class="catalog-nav-list__link">Сливочное</a>
+              </li>
+              <li class="catalog-nav-list__item">
+                <a href="#" class="catalog-nav-list__link">Щербеты</a>
+              </li>
+              <li class="catalog-nav-list__item">
+                <a href="#" class="catalog-nav-list__link">Фруктовый лед</a>
+              </li>
+              <li class="catalog-nav-list__item">
+                <a href="#" class="catalog-nav-list__link">Мелорин</a>
+              </li>
+            </ul>
+          </li>
+          <li class="site-nav__item">
+            <a href="#" class="site-nav__link">Доставка и оплата</a>
+          </li>
+          <li class="site-nav__item">
+            <a href="#" class="site-nav__link">О компании</a>
+          </li>
+        </ul>
+        <ul class="user-nav">
+          <li class="user-nav__item">
+            <a href="tel:88005558628" class="user-nav__link">+7 800 555-86-28</a>
+          </li>
+          <li class="user-nav__item search">
+            <form action="" method="get">
+              <label for="search" class="visually-hidden">Поиск по сайту</label>
+              <input type="text" id="search" name="search" class="search__input" placeholder="Поиск по сайту">
+              <button type="submit" class="search__button">Найти</button>
+            </form>
+          </li>
+          <li class="user-nav__item">
+            <a href="#" class="user-nav__link">Вход</a>
+          </li>
+          <li class="user-nav__item cart">
+            <a href="#" class="cart__link">
+              <span class="visually-hidden">Корзина</span>
+              <span class="cart__count">2 товара</span>
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </header>
   </body>
 </html>
