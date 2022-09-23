@@ -41,7 +41,7 @@
             <a href="tel:88005558628" class="user-nav__link">+7 800 555-86-28</a>
           </li>
           <li class="user-nav__item search">
-            <form action="" method="get">
+            <form action="https://echo.htmlacademy.ru/" method="get">
               <label for="search" class="visually-hidden">Поиск по сайту</label>
               <input type="text" id="search" name="search" class="search__input" placeholder="Поиск по сайту">
               <button type="submit" class="search__button">Найти</button>
@@ -171,6 +171,61 @@
             <button class="product-card__button">Добавить в корзину</button>
           </li>
         </ul>
+      </section>
+      <section class="about">
+        <h2 class="about__header">Магазин Глейси – это онлайн и офлайн-магазин по продаже мороженого собственного производства на развес</h2>
+        <ul class="about__list">
+          <li class="about__item">Всё наше мороженое изготавливается на собственном производстве с использованием современного оборудования и проверенных временем технологий.</li>
+          <li class="about__item">Для приготовления мороженого используются сливки и молоко высочайшего качества. Все ингредиенты и добавки произведены из натурального сырья.</li>
+          <li class="about__item">Закупка ингредиентов производится только у проверенных фермерских хозяйств, с которыми нас связывает долговременное сотрудничество.</li>
+          <li class="about__item">Доставка нашего мороженого осуществляется в специальном термопаке, который не даёт мороженому растаять и позволяет сохранить превосходный вкус.</li>
+        </ul>
+      </section>
+      <article class="blog">
+        <p class="blog__header">Новое в нашем блоге</p>
+        <a href="#" class="blog__link">
+          <h3 class="blog__header">10 способов сервировки фруктовых щербетов к столу</h3>
+        </a>
+      </article>
+      <section class="subscribe">
+        <h2 class="visually-hidden">Подписка на рассылку</h2>
+        <form action="https://echo.htmlacademy.ru/" method="post" class="subscribe__form">
+          <label for="email" class="subscribe__description">Подпишитесь на нашу сладкую рассылку и будьте всегда в курсе всего самого вкусного, что у нас происходит.
+            Обещаем не спамить и не слать всякой ненужной ерунды. Честно =)</label>
+          <input type="email" id="email" name="email" placeholder="email@example.com" class="subscribe__input">
+          <button type="submit" class="subscribe__button">Отправить</button>
+        </form>
+      </section>
+      <section class="delivery">
+        <h2 class="delivery__header">Доставка любимого мороженого на дом</h2>
+        <p class="delivery__description">Хочется полакомиться любимым десертом, но нет времени съездить в магазин? Закажите доставку мороженого на дом, и курьер привезёт вам ваш заказ в течение часа!</p>
+        <form action="https://echo.htmlacademy.ru/" method="post" class="delivery-form">
+          <p class="delivery-form__text">Укажите адрес и дату доставки, и мы свяжемся с вами, чтобы подтвердить заказ.</p>
+          <p class="delivery-form__item">
+            <label for="date" class="delivery-form__label">Дата </label>
+            <input type="date" id="date" name="date" value="2020-04-01" class="delivery-form__input">
+          </p>
+          <p class="delivery-form__item">
+            <label for="phone" class="delivery-form__label">Телефон </label>
+            <input type="tel" id="phone" name="phone" placeholder="+7 800 999-00-00" class="delivery-form__input">
+          </p>
+          <p class="delivery-form__item">
+            <label for="address" class="delivery-form__label">Адрес </label>
+            <input type="text" id="address" name="address" placeholder="ул. Большая Конюшенная, 19/8" class="delivery-form__input">
+          </p>
+          <button type="submit" class="delivery-form__button">Отправить</button>
+        </form>
+      </section>
+      <section class="contacts">
+        <h2 class="visually-hidden">Контакты и обратная связь</h2>
+        <div class="contacts__wrapper">
+          <p class="contacts__text">Адрес главного офиса и офлайн-магазина:</p>
+          <address class="contacts__address">наб. реки Карповки, 5 лит П, Санкт-Петербург</address>
+          <p class="contacts__text">Для заказов по телефону:</p>
+          <a href="tel:88128121212" class="contacts__phone">+7 (812) 812-12-12</a>
+          <p class="contacts__caption">(с 10 до 20 ежедневно)</p>
+          <a href="#" class="contacts__button">Форма обратной связи</a>
+        </div>
       </section>
     </main>
   </body>
