@@ -14,7 +14,11 @@
         </a>
         <ul class="site-nav">
           <li class="site-nav__item">
-            Каталог
+            <a class="catalog-nav-list__link" href="#">Каталог
+              <svg width="16" height="16" fill="" xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M3.8 6.2a.67.67 0 1 0-.93.94l4.66 4.66a.66.66 0 0 0 .95 0l4.66-4.66a.67.67 0 0 0-.94-.94L8 10.39l-4.2-4.2Z"/>
+              </svg>
+            </a>
             <ul class="catalog-nav-list">
               <li class="catalog-nav-list__item">
                 <a class="catalog-nav-list__link catalog-nav-list__link--current">Новинки</a>
@@ -47,12 +51,12 @@
           <li class="user-nav__item search">
             <form class="search-form" action="https://echo.htmlacademy.ru/" method="get">
               <label class="visually-hidden" for="search">Поиск по сайту.</label>
-              <input class="search__input" type="text" id="search" name="search" placeholder="Поиск по сайту">
+              <input class="search__input search__input--hidden" type="text" id="search" name="search" placeholder="Поиск по сайту">
               <button class="search__button" type="submit">
                 <svg width="14" height="14" fill="" xmlns="http://www.w3.org/2000/svg">
                   <path fill-rule="evenodd" clip-rule="evenodd" d="M1.66 6.19a4.67 4.67 0 1 1 9.34 0 4.67 4.67 0 0 1-9.34 0Zm8.42 4.69a6 6 0 1 1 .94-.94l2.45 2.44a.67.67 0 1 1-.94.95l-2.45-2.45Z"/>
                 </svg>
-                Найти
+                <span class="visually-hidden">Найти</span>
               </button>
             </form>
           </li>
@@ -63,7 +67,7 @@
               </svg>
               Вход
             </a>
-            <div class="personal-area-popup">
+            <div class="personal-area-popup personal-area-popup--hidden">
               <h3 class="personal-area-popup__header">Личный кабинет</h3>
               <form class="form" action="https://echo.htmlacademy.ru/" method="post">
                 <label class="visually-hidden" for="personal-area-email">Введите email</label>
