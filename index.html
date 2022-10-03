@@ -15,8 +15,8 @@
         <ul class="site-nav">
           <li class="site-nav__item">
             <a class="catalog-nav-list__link" href="#">Каталог
-              <svg width="16" height="16" fill="" xmlns="http://www.w3.org/2000/svg">
-                <path fill-rule="evenodd" clip-rule="evenodd" d="M3.8 6.2a.67.67 0 1 0-.93.94l4.66 4.66a.66.66 0 0 0 .95 0l4.66-4.66a.67.67 0 0 0-.94-.94L8 10.39l-4.2-4.2Z"/>
+              <svg width="16" height="16" xmlns="http://www.w3.org/2000/svg">
+                <use xlink:href="images/icons/sprite.svg#arrow-down"></use>
               </svg>
             </a>
             <ul class="catalog-nav-list">
@@ -48,13 +48,13 @@
           <li class="user-nav__item">
             <a class="user-nav__link user-nav__link--phone" href="tel:+78005558628">+7 800 555-86-28</a>
           </li>
-          <li class="user-nav__item search">
-            <form class="search-form" action="https://echo.htmlacademy.ru/" method="get">
+          <li class="user-nav__item">
+            <form class="form" action="https://echo.htmlacademy.ru/" method="get">
               <label class="visually-hidden" for="search">Поиск по сайту.</label>
-              <input class="search__input search__input--hidden" type="text" id="search" name="search" placeholder="Поиск по сайту">
-              <button class="search__button" type="submit">
-                <svg width="14" height="14" fill="" xmlns="http://www.w3.org/2000/svg">
-                  <path fill-rule="evenodd" clip-rule="evenodd" d="M1.66 6.19a4.67 4.67 0 1 1 9.34 0 4.67 4.67 0 0 1-9.34 0Zm8.42 4.69a6 6 0 1 1 .94-.94l2.45 2.44a.67.67 0 1 1-.94.95l-2.45-2.45Z"/>
+              <input class="form__input" type="search" id="search" name="search" placeholder="Поиск по сайту">
+              <button class="form__button--search" type="submit">
+                <svg width="14" height="14" xmlns="http://www.w3.org/2000/svg">
+                  <use xlink:href="images/icons/sprite.svg#search"></use>
                 </svg>
                 <span class="visually-hidden">Найти</span>
               </button>
@@ -62,33 +62,33 @@
           </li>
           <li class="user-nav__item">
             <a href="#" class="user-nav__link">
-              <svg width="14" height="15" fill="" xmlns="http://www.w3.org/2000/svg">
-                <path fill-rule="evenodd" clip-rule="evenodd" d="M8 1.52c0-.36.3-.66.67-.66h2.66a2 2 0 0 1 2 2v9.33a2 2 0 0 1-2 2H8.67a.67.67 0 0 1 0-1.33h2.66a.67.67 0 0 0 .67-.67V2.86a.67.67 0 0 0-.67-.67H8.67A.67.67 0 0 1 8 1.52Zm-3.14 2.2a.67.67 0 0 1 .94 0l3.33 3.33a.67.67 0 0 1 .2.47.66.66 0 0 1-.2.48L5.8 11.33a.67.67 0 1 1-.94-.94l2.2-2.2H.66a.67.67 0 1 1 0-1.33h6.4l-2.2-2.2a.67.67 0 0 1 0-.94Z"/>
+              <svg width="14" height="15" xmlns="http://www.w3.org/2000/svg">
+                <use xlink:href="images/icons/sprite.svg#enter"></use>
               </svg>
               Вход
             </a>
-            <div class="personal-area-popup personal-area-popup--hidden">
+            <div class="personal-area-popup" hidden>
               <h3 class="personal-area-popup__header">Личный кабинет</h3>
               <form class="form" action="https://echo.htmlacademy.ru/" method="post">
                 <label class="visually-hidden" for="personal-area-email">Введите email</label>
                 <input class="form__input" type="email" id="personal-area-email" name="personal-area-email" placeholder="email@example.com">
                 <label class="visually-hidden" for="personal-area-password">Введите пароль</label>
                 <input class="form__input" type="password" id="personal-area-password" name="personal-area-password">
-                <button class="form__button" type="submit">Войти</button>
+                <button class="button button--primary" type="submit">Войти</button>
                 <a class="form__link" href="#">Забыли пароль?</a>
                 <a class="form__link" href="#">Регистрация</a>
               </form>
             </div>
           </li>
-          <li class="user-nav__item cart">
+          <li class="user-nav__item cart" hidden>
             <a class="cart__link" href="#">
               <span class="visually-hidden">Корзина</span>
-              <svg width="15" height="14" fill="" xmlns="http://www.w3.org/2000/svg">
-                <path fill-rule="evenodd" clip-rule="evenodd" d="M1.17.1a.67.67 0 1 0 0 1.34h1.77l.47 2.34v.05l.97 4.83a1.83 1.83 0 0 0 1.82 1.47h5.62a1.83 1.83 0 0 0 1.82-1.47l.93-4.86a.67.67 0 0 0-.66-.8h-9.3L4.14.65a.67.67 0 0 0-.66-.53H1.17Zm4.52 8.3-.81-4.06h8.23l-.78 4.07a.5.5 0 0 1-.49.39H6.18a.5.5 0 0 1-.49-.4Zm-1.13 3.96a1.25 1.25 0 1 1 2.49 0 1.25 1.25 0 0 1-2.5 0Zm6.37 0a1.25 1.25 0 1 1 2.5 0 1.25 1.25 0 0 1-2.5 0Z"/>
+              <svg width="15" height="14" xmlns="http://www.w3.org/2000/svg">
+                <use xlink:href="images/icons/sprite.svg#cart"></use>
               </svg>
               <span class="cart__count">2 товара</span>
             </a>
-            <div class="cart-popup cart-popup--with-products cart-popup--hidden">
+            <div class="cart-popup cart-popup--with-products">
               <h3 class="cart-popup__header">Корзина</h3>
               <div class="cart-popup__row">
                 <a href="#">
@@ -121,11 +121,11 @@
                 </a>
               </div>
               <div class="cart-popup__row cart-popup__row--total">
-                <a class="cart-popup__button" href="#" >Оформить заказ</a>
+                <a class="button button--primary" href="#">Оформить заказ</a>
                 <p class="cart-popup__price">Итого: 790 &#8381;</p>
               </div>
             </div>
-            <div class="cart-popup cart-popup--empty cart-popup--hidden">
+            <div class="cart-popup cart-popup--empty" hidden>
               <h3 class="cart-popup__header cart-popup__header--empty">Ваша корзина пока пуста</h3>
             </div>
           </li>
@@ -152,7 +152,7 @@
                 <p class="slider-description__description">Необычный сладкий десерт с карамельным топпингом и кусочками зефира завоюет сердца сладкоежек всех возрастов.</p>
               </li>
             </ul>
-            <a class="slider__button" href="#">Заказать</a>
+            <a class="button button--secondary" href="#">Заказать</a>
           </div>
           <div class="slider-picture">
             <ul class="slider-picture__list">
@@ -167,14 +167,14 @@
               </li>
             </ul>
             <a href="#" class="slider-picture__button">
-              <svg  width="16" height="16" fill="" xmlns="http://www.w3.org/2000/svg">
-                <path fill-rule="evenodd" clip-rule="evenodd" d="M8.86 13.14a.66.66 0 0 0 .95-.95L5.6 8l4.2-4.2a.67.67 0 0 0-.95-.94L4.2 7.52a.66.66 0 0 0 0 .94l4.66 4.68Z"/>
+              <svg  width="16" height="16" xmlns="http://www.w3.org/2000/svg">
+                <use xlink:href="images/icons/sprite.svg#arrow-left"></use>
               </svg>
               <span class="visually-hidden">Назад</span>
             </a>
             <a href="#" class="slider-picture__button">
-              <svg width="16" height="16" fill="" xmlns="http://www.w3.org/2000/svg">
-                <path fill-rule="evenodd" clip-rule="evenodd" d="M7.14 2.86a.66.66 0 1 0-.95.95L10.4 8l-4.2 4.2a.67.67 0 0 0 .95.94l4.66-4.67a.66.66 0 0 0 0-.94L7.15 2.86Z"/>
+              <svg  width="16" height="16" xmlns="http://www.w3.org/2000/svg">
+                <use xlink:href="images/icons/sprite.svg#arrow-right"></use>
               </svg>
               <span class="visually-hidden">Вперед</span>
             </a>
@@ -194,25 +194,25 @@
           </ol>
           <ul class="social-list">
             <li class="social-list__item">
-              <a class="social-list__link" href="https://t.me/htmlacademy">
-                <svg class="social-list__icon" width="24" height="24" fill="" xmlns="http://www.w3.org/2000/svg">
-                  <path fill-rule="evenodd" clip-rule="evenodd" d="M24 12a12 12 0 1 1-24 0 12 12 0 0 1 24 0ZM12.43 8.86c-1.17.48-3.5 1.49-7 3.01-.57.23-.86.45-.9.67-.04.36.42.5 1.04.7l.27.08c.6.2 1.43.44 1.86.45.39 0 .82-.16 1.3-.48 3.27-2.21 4.96-3.33 5.06-3.35.08-.02.18-.04.25.02.07.07.07.18.06.22-.05.19-1.84 1.86-2.77 2.72a28.24 28.24 0 0 0-.82.79c-.57.54-1 .96.02 1.63.5.32.89.59 1.28.85a88.77 88.77 0 0 0 1.8 1.23c.5.35.95.67 1.5.62.32-.03.65-.33.82-1.23.4-2.13 1.18-6.73 1.36-8.63.01-.16 0-.31-.02-.47a.5.5 0 0 0-.17-.33.78.78 0 0 0-.46-.14c-.46.01-1.15.25-4.48 1.64Z"/>
+              <a class="social-list__link social-list__link--slider" href="https://t.me/htmlacademy">
+                <svg width="24" height="24" xmlns="http://www.w3.org/2000/svg">
+                  <use xlink:href="images/icons/sprite.svg#telegram"></use>
                 </svg>
                 <span class="visually-hidden">Телеграм.</span>
               </a>
             </li>
             <li class="social-list__item">
-              <a class="social-list__link" href="https://vk.com/htmlacademy">
-                <svg class="social-list__icon" width="24" height="24" fill="" xmlns="http://www.w3.org/2000/svg">
-                  <path fill-rule="evenodd" clip-rule="evenodd" d="M24 12a12 12 0 1 1-24 0 12 12 0 0 1 24 0Zm-11.41 2.97h-.72s-1.58.09-2.98-1.18C7.37 12.4 6.03 9.65 6.03 9.65s-.07-.18 0-.27c.1-.1.36-.1.36-.1l1.72-.01s.16.02.27.1c.1.05.15.17.15.17s.28.61.65 1.17c.71 1.08 1.05 1.32 1.29 1.2.35-.16.25-1.53.25-1.53s0-.5-.18-.71c-.14-.17-.41-.22-.53-.24-.1-.01.06-.2.26-.3.31-.13.86-.13 1.5-.13.5 0 .65.03.84.07.46.1.44.41.41 1.08l-.02.7v.18c-.01.34-.02.73.23.88.13.07.45 0 1.26-1.19.38-.56.66-1.23.66-1.23s.07-.12.16-.17c.1-.05.24-.04.24-.04h1.8s.54-.06.63.15c.1.23-.2.75-.94 1.61-.7.82-1.03 1.12-1 1.38.01.2.23.38.66.72.89.73 1.13 1.1 1.18 1.2l.01.01c.4.58-.44.62-.44.62l-1.6.02s-.34.06-.8-.2a3.94 3.94 0 0 1-.69-.6c-.33-.34-.65-.66-.91-.58-.45.12-.44.96-.44.96s0 .18-.1.28c-.1.1-.32.12-.32.12Z"/>
+              <a class="social-list__link social-list__link--slider" href="https://vk.com/htmlacademy">
+                <svg width="24" height="24" fill="" xmlns="http://www.w3.org/2000/svg">
+                  <use xlink:href="images/icons/sprite.svg#vk"></use>
                 </svg>
                 <span class="visually-hidden">ВКонтакте.</span>
               </a>
             </li>
             <li class="social-list__item">
-              <a class="social-list__link" href="https://www.youtube.com/user/htmlacademyru">
-                <svg class="social-list__icon"  width="24" height="24" fill="" xmlns="http://www.w3.org/2000/svg">
-                  <path d="m14 11.8-2.8-1.32c-.25-.11-.45.01-.45.29v2.46c0 .28.2.4.45.29L14 12.2c.25-.12.25-.3 0-.42ZM12 0a12 12 0 1 0 0 24 12 12 0 0 0 0-24Zm0 16.88c-6.14 0-6.25-.56-6.25-4.88s.1-4.88 6.25-4.88c6.14 0 6.25.56 6.25 4.88s-.1 4.88-6.25 4.88Z"/>
+              <a class="social-list__link social-list__link--slider" href="https://www.youtube.com/user/htmlacademyru">
+                <svg width="24" height="24" xmlns="http://www.w3.org/2000/svg">
+                  <use xlink:href="images/icons/sprite.svg#youtube"></use>
                 </svg>
                 <span class="visually-hidden">Youtube.</span>
               </a>
@@ -226,13 +226,13 @@
           <h3 class="bonus-card__header">Малинка даром!</h3>
           <p class="bonus-card__description">При покупке 2 кг любого фруктового мороженого добавим в ваш заказ банку малинового варенья бесплатно.</p>
           <img class="bonus-card__img" src="images/content/bonus-raspberry.png" width="219" height="268" alt="Вафельный рожок с малиной." >
-          <a class="bonus-card__button" href="#">Хочу подарок</a>
+          <a class="button button--secondary" href="#">Хочу подарок</a>
         </article>
         <article class="bonus-card">
           <h3 class="bonus-card__header">Маршмеллоу даром!</h3>
           <p class="bonus-card__description">При покупке 2 кг пломбира добавим в ваш заказ упаковку нежных зефирок совершенно бесплатно.</p>
           <img class="bonus-card__img" src="images/content/bonus-marshmallow.png" width="219" height="268" alt="Вафельный рожок с маршмеллоу." >
-          <a class="bonus-card__button" href="#">Хочу подарок</a>
+          <a class="button button--secondary" href="#">Хочу подарок</a>
         </article>
       </section>
       <section class="popular">
@@ -246,8 +246,8 @@
             <p class="product-card__description">Сливочное мороженое с малиновым джемом</p>
             <b class="product-card__price">310 &#8381;/кг</b>
             <a class="product-card__button" href="#">
-              <svg class="product-card__icon" width="15" height="14" fill="" xmlns="http://www.w3.org/2000/svg">
-                <path fill-rule="evenodd" clip-rule="evenodd" d="M1.17.1a.67.67 0 1 0 0 1.34h1.77l.47 2.34v.05l.97 4.83a1.83 1.83 0 0 0 1.82 1.47h5.62a1.83 1.83 0 0 0 1.82-1.47l.93-4.86a.67.67 0 0 0-.66-.8h-9.3L4.14.65a.67.67 0 0 0-.66-.53H1.17Zm4.52 8.3-.81-4.06h8.23l-.78 4.07a.5.5 0 0 1-.49.39H6.18a.5.5 0 0 1-.49-.4Zm-1.13 3.96a1.25 1.25 0 1 1 2.49 0 1.25 1.25 0 0 1-2.5 0Zm6.37 0a1.25 1.25 0 1 1 2.5 0 1.25 1.25 0 0 1-2.5 0Z"/>
+              <svg width="15" height="14" xmlns="http://www.w3.org/2000/svg">
+                <use xlink:href="images/icons/sprite.svg#cart"></use>
               </svg>
               <span class="visually-hidden">Добавить в корзину</span>
             </a>
@@ -260,8 +260,8 @@
             <p class="product-card__description">Фисташковый пломбир с кусочками шоколада</p>
             <b class="product-card__price">340 &#8381;/кг</b>
             <a class="product-card__button" href="#">
-              <svg class="product-card__icon" width="15" height="14" fill="" xmlns="http://www.w3.org/2000/svg">
-                <path fill-rule="evenodd" clip-rule="evenodd" d="M1.17.1a.67.67 0 1 0 0 1.34h1.77l.47 2.34v.05l.97 4.83a1.83 1.83 0 0 0 1.82 1.47h5.62a1.83 1.83 0 0 0 1.82-1.47l.93-4.86a.67.67 0 0 0-.66-.8h-9.3L4.14.65a.67.67 0 0 0-.66-.53H1.17Zm4.52 8.3-.81-4.06h8.23l-.78 4.07a.5.5 0 0 1-.49.39H6.18a.5.5 0 0 1-.49-.4Zm-1.13 3.96a1.25 1.25 0 1 1 2.49 0 1.25 1.25 0 0 1-2.5 0Zm6.37 0a1.25 1.25 0 1 1 2.5 0 1.25 1.25 0 0 1-2.5 0Z"/>
+              <svg width="15" height="14" xmlns="http://www.w3.org/2000/svg">
+                <use xlink:href="images/icons/sprite.svg#cart"></use>
               </svg>
               <span class="visually-hidden">Добавить в корзину</span>
             </a>
@@ -274,8 +274,8 @@
             <p class="product-card__description">Крем-брюле с черничным джемом</p>
             <b class="product-card__price">330 &#8381;/кг</b>
             <a class="product-card__button" href="#">
-              <svg class="product-card__icon" width="15" height="14" fill="" xmlns="http://www.w3.org/2000/svg">
-                <path fill-rule="evenodd" clip-rule="evenodd" d="M1.17.1a.67.67 0 1 0 0 1.34h1.77l.47 2.34v.05l.97 4.83a1.83 1.83 0 0 0 1.82 1.47h5.62a1.83 1.83 0 0 0 1.82-1.47l.93-4.86a.67.67 0 0 0-.66-.8h-9.3L4.14.65a.67.67 0 0 0-.66-.53H1.17Zm4.52 8.3-.81-4.06h8.23l-.78 4.07a.5.5 0 0 1-.49.39H6.18a.5.5 0 0 1-.49-.4Zm-1.13 3.96a1.25 1.25 0 1 1 2.49 0 1.25 1.25 0 0 1-2.5 0Zm6.37 0a1.25 1.25 0 1 1 2.5 0 1.25 1.25 0 0 1-2.5 0Z"/>
+              <svg width="15" height="14" xmlns="http://www.w3.org/2000/svg">
+                <use xlink:href="images/icons/sprite.svg#cart"></use>
               </svg>
               <span class="visually-hidden">Добавить в корзину</span>
             </a>
@@ -288,8 +288,8 @@
             <p class="product-card__description">Ванильный пломбир со сладкой посыпкой</p>
             <b class="product-card__price">320 &#8381;/кг</b>
             <a class="product-card__button" href="#">
-              <svg class="product-card__icon" width="15" height="14" fill="" xmlns="http://www.w3.org/2000/svg">
-                <path fill-rule="evenodd" clip-rule="evenodd" d="M1.17.1a.67.67 0 1 0 0 1.34h1.77l.47 2.34v.05l.97 4.83a1.83 1.83 0 0 0 1.82 1.47h5.62a1.83 1.83 0 0 0 1.82-1.47l.93-4.86a.67.67 0 0 0-.66-.8h-9.3L4.14.65a.67.67 0 0 0-.66-.53H1.17Zm4.52 8.3-.81-4.06h8.23l-.78 4.07a.5.5 0 0 1-.49.39H6.18a.5.5 0 0 1-.49-.4Zm-1.13 3.96a1.25 1.25 0 1 1 2.49 0 1.25 1.25 0 0 1-2.5 0Zm6.37 0a1.25 1.25 0 1 1 2.5 0 1.25 1.25 0 0 1-2.5 0Z"/>
+              <svg width="15" height="14" xmlns="http://www.w3.org/2000/svg">
+                <use xlink:href="images/icons/sprite.svg#cart"></use>
               </svg>
               <span class="visually-hidden">Добавить в корзину</span>
             </a>
@@ -319,7 +319,7 @@
               Обещаем не спамить и не слать всякой ненужной ерунды. Честно =)</p>
             <label class="visually-hidden" for="subscribe-email">Введите email</label>
             <input class="form__input" type="email" id="subscribe-email" name="subscribe-email" placeholder="email@example.com">
-            <button class="form__button" type="submit">Отправить</button>
+            <button class="button button--primary" type="submit">Отправить</button>
           </form>
         </div>
       </article>
@@ -344,7 +344,7 @@
             <label class="form__label" for="delivery-address">Адрес </label>
             <input class="form__input" type="text" id="delivery-address" name="delivery-address" placeholder="ул. Большая Конюшенная, 19/8">
           </div>
-          <button class="form__button" type="submit">Отправить</button>
+          <button class="button button--primary" type="submit">Отправить</button>
         </form>
       </section>
       <section class="contacts">
@@ -355,7 +355,7 @@
           <p class="contacts__text">Для заказов по телефону:</p>
           <a href="tel:+78128121212" class="contacts__phone">+7 (812) 812-12-12</a>
           <p class="contacts__caption">(с 10 до 20 ежедневно)</p>
-          <a class="contacts__button" href="#">Форма обратной связи</a>
+          <a class="button button--primary" href="#">Форма обратной связи</a>
         </div>
       </section>
     </main>
@@ -363,8 +363,8 @@
       <ul class="social-list">
         <li class="social-list__item">
           <a class="social-list__link" href="https://t.me/htmlacademy">
-            <svg class="social-list__icon" width="24" height="24" fill="" xmlns="http://www.w3.org/2000/svg">
-              <path fill-rule="evenodd" clip-rule="evenodd" d="M24 12a12 12 0 1 1-24 0 12 12 0 0 1 24 0ZM12.43 8.86c-1.17.48-3.5 1.49-7 3.01-.57.23-.86.45-.9.67-.04.36.42.5 1.04.7l.27.08c.6.2 1.43.44 1.86.45.39 0 .82-.16 1.3-.48 3.27-2.21 4.96-3.33 5.06-3.35.08-.02.18-.04.25.02.07.07.07.18.06.22-.05.19-1.84 1.86-2.77 2.72a28.24 28.24 0 0 0-.82.79c-.57.54-1 .96.02 1.63.5.32.89.59 1.28.85a88.77 88.77 0 0 0 1.8 1.23c.5.35.95.67 1.5.62.32-.03.65-.33.82-1.23.4-2.13 1.18-6.73 1.36-8.63.01-.16 0-.31-.02-.47a.5.5 0 0 0-.17-.33.78.78 0 0 0-.46-.14c-.46.01-1.15.25-4.48 1.64Z"/>
+            <svg class="social-list__icon" width="24" height="24" xmlns="http://www.w3.org/2000/svg">
+              <use xlink:href="images/icons/sprite.svg#telegram"></use>
             </svg>
             <span class="visually-hidden">Телеграм.</span>
           </a>
@@ -372,15 +372,15 @@
         <li class="social-list__item">
           <a class="social-list__link" href="https://vk.com/htmlacademy">
             <svg class="social-list__icon" width="24" height="24" fill="" xmlns="http://www.w3.org/2000/svg">
-              <path fill-rule="evenodd" clip-rule="evenodd" d="M24 12a12 12 0 1 1-24 0 12 12 0 0 1 24 0Zm-11.41 2.97h-.72s-1.58.09-2.98-1.18C7.37 12.4 6.03 9.65 6.03 9.65s-.07-.18 0-.27c.1-.1.36-.1.36-.1l1.72-.01s.16.02.27.1c.1.05.15.17.15.17s.28.61.65 1.17c.71 1.08 1.05 1.32 1.29 1.2.35-.16.25-1.53.25-1.53s0-.5-.18-.71c-.14-.17-.41-.22-.53-.24-.1-.01.06-.2.26-.3.31-.13.86-.13 1.5-.13.5 0 .65.03.84.07.46.1.44.41.41 1.08l-.02.7v.18c-.01.34-.02.73.23.88.13.07.45 0 1.26-1.19.38-.56.66-1.23.66-1.23s.07-.12.16-.17c.1-.05.24-.04.24-.04h1.8s.54-.06.63.15c.1.23-.2.75-.94 1.61-.7.82-1.03 1.12-1 1.38.01.2.23.38.66.72.89.73 1.13 1.1 1.18 1.2l.01.01c.4.58-.44.62-.44.62l-1.6.02s-.34.06-.8-.2a3.94 3.94 0 0 1-.69-.6c-.33-.34-.65-.66-.91-.58-.45.12-.44.96-.44.96s0 .18-.1.28c-.1.1-.32.12-.32.12Z"/>
+              <use xlink:href="images/icons/sprite.svg#vk"></use>
             </svg>
             <span class="visually-hidden">ВКонтакте.</span>
           </a>
         </li>
         <li class="social-list__item">
           <a class="social-list__link" href="https://www.youtube.com/user/htmlacademyru">
-            <svg class="social-list__icon"  width="24" height="24" fill="" xmlns="http://www.w3.org/2000/svg">
-              <path d="m14 11.8-2.8-1.32c-.25-.11-.45.01-.45.29v2.46c0 .28.2.4.45.29L14 12.2c.25-.12.25-.3 0-.42ZM12 0a12 12 0 1 0 0 24 12 12 0 0 0 0-24Zm0 16.88c-6.14 0-6.25-.56-6.25-4.88s.1-4.88 6.25-4.88c6.14 0 6.25.56 6.25 4.88s-.1 4.88-6.25 4.88Z"/>
+            <svg class="social-list__icon"  width="24" height="24" xmlns="http://www.w3.org/2000/svg">
+              <use xlink:href="images/icons/sprite.svg#youtube"></use>
             </svg>
             <span class="visually-hidden">Youtube.</span>
           </a>
