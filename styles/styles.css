@@ -1,5 +1,7 @@
-/* INDEX */
+/* HEADER */
 /* header */
+
+/* INDEX */
 /* main */
 /* promo */
 /* bonus */
@@ -9,17 +11,19 @@
 /* subscribe */
 /* delivery */
 /* contacts */
-/* footer */
-/* buttons */
-/* form */
-/* social-list */
-/* modal */
 
 /* CATALOG */
 /* breadcrumbs */
 /* filter-form */
 /* products */
 /* pagination */
+
+/* FOOTER */
+/* footer */
+/* buttons */
+/* form */
+/* social-list */
+/* modal */
 
 @font-face {
   font-family: "Inter";
@@ -63,6 +67,8 @@
   clip: rect(0 0 0 0);
   overflow: hidden;
 }
+
+/* HEADER */
 
 .page {
   font-family: "Inter", Arial, sans-serif;
@@ -171,13 +177,13 @@
   height: 10px;
 }
 
+/* INDEX */
 /* main */
 
 .main {
   flex-grow: 1;
   display: flex;
   flex-direction: column;
-
 }
 
 /* promo */
@@ -480,6 +486,112 @@
   color: #565C66;
 }
 
+/* CATALOG */
+
+.main__header {
+  font-weight: 900;
+  font-size: 32px;
+  line-height: 46px;
+}
+
+/* breadcrumbs */
+
+.breadcrumbs {
+  display: flex;
+  list-style: none;
+
+}
+
+.breadcrumbs__item::after {
+  content: "";
+  display: block;
+  width: 12px;
+  height: 12px;
+  background-image: url("../images/icons/chevrons.svg");
+  background-repeat: no-repeat;
+}
+
+.breadcrumbs__item:last-child::after {
+  background-image: none;
+}
+
+.breadcrumbs__link {
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 20px;
+  text-decoration: none;
+  color: #2D3440;
+}
+
+.breadcrumbs__link--current {
+  text-decoration: underline;
+}
+
+/* filter-form */
+
+.filter {
+  font-size: 14px;
+  line-height: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  width: 850px;
+}
+
+.filter-sort__list {
+  font-family: inherit;
+  font-size: inherit;
+  line-height: inherit;
+}
+
+.filter__button {
+  font-size: 14px;
+  background: rgba(252, 252, 252, 0.3);
+}
+
+/* products */
+
+.products__list {
+  list-style: none;
+  padding-left: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+
+.products__bottom {
+  display: flex;
+}
+
+.products__more {
+  margin-left: 50%;
+  transform: translateX(-50%);
+}
+
+/* pagination */
+
+.products__pagination {
+  margin-left: auto;
+}
+
+.pagination__link {
+  line-height: 20px;
+  text-decoration: none;
+  color: #2D3440;
+}
+
+.pagination__link--back {
+  opacity: 0.3;
+}
+
+.pagination__link--forward {
+  fill: #2D3440;
+}
+
+.pagination__link--current {
+  background-color: #FCFCFC;
+}
+
+/* FOOTER */
 /* footer */
 
 .footer {
@@ -614,109 +726,4 @@
 
 .modal {
   display: none;
-}
-
-/* CATALOG */
-
-.main__header {
-  font-weight: 900;
-  font-size: 32px;
-  line-height: 46px;
-}
-
-/* breadcrumbs */
-
-.breadcrumbs {
-  display: flex;
-  list-style: none;
-
-}
-
-.breadcrumbs__item::after {
-  content: "";
-  display: block;
-  width: 12px;
-  height: 12px;
-  background-image: url("../images/icons/chevrons.svg");
-  background-repeat: no-repeat;
-}
-
-.breadcrumbs__item:last-child::after {
-  background-image: none;
-}
-
-.breadcrumbs__link {
-  font-weight: 700;
-  font-size: 14px;
-  line-height: 20px;
-  text-decoration: none;
-  color: #2D3440;
-}
-
-.breadcrumbs__link--current {
-  text-decoration: underline;
-}
-
-/* filter-form */
-
-.filter {
-  font-size: 14px;
-  line-height: 20px;
-  display: flex;
-  flex-wrap: wrap;
-  width: 850px;
-}
-
-.filter-sort__list {
-  font-family: inherit;
-  font-size: inherit;
-  line-height: inherit;
-}
-
-.filter__button {
-  font-size: 14px;
-  background: rgba(252, 252, 252, 0.3);
-}
-
-/* products */
-
-.products__list {
-  list-style: none;
-  padding-left: 0;
-  display: flex;
-  flex-wrap: wrap;
-  gap: 30px;
-}
-
-.products__bottom {
-  display: flex;
-}
-
-.products__more {
-  margin-left: 50%;
-  transform: translateX(-50%);
-}
-
-/* pagination */
-
-.products__pagination {
-  margin-left: auto;
-}
-
-.pagination__link {
-  line-height: 20px;
-  text-decoration: none;
-  color: #2D3440;
-}
-
-.pagination__link--back {
-  opacity: 0.3;
-}
-
-.pagination__link--forward {
-  fill: #2D3440;
-}
-
-.pagination__link--current {
-  background-color: #FCFCFC;
 }
