@@ -225,19 +225,15 @@
         <h2 class="bonus__title title">Заказывайте мороженое<br>и получайте подарки!</h2>
         <div class="bonus__wrapper">
           <article class="bonus-card">
-            <div class="bonus-card__wrapper">
-              <h3 class="bonus-card__header">Малинка даром!</h3>
-              <p class="bonus-card__description">При покупке 2 кг любого фруктового мороженого добавим в ваш заказ банку малинового варенья бесплатно.</p>
-              <a class="bonus-card__button button button--secondary" href="#">Хочу подарок</a>
-            </div>
+            <h3 class="bonus-card__header">Малинка даром!</h3>
+            <p class="bonus-card__description">При покупке 2 кг любого фруктового мороженого добавим в ваш заказ банку малинового варенья бесплатно.</p>
+            <a class="bonus-card__button button button--secondary" href="#">Хочу подарок</a>
             <img class="bonus-card__img" src="images/content/bonus-raspberry.png" width="219" height="268" alt="Вафельный рожок с малиной." >
           </article>
           <article class="bonus-card">
-            <div class="bonus-card__wrapper">
-              <h3 class="bonus-card__header">Маршмеллоу даром!</h3>
-              <p class="bonus-card__description">При покупке 2 кг пломбира добавим в ваш заказ упаковку нежных зефирок совершенно бесплатно.</p>
-              <a class="bonus-card__button button button--secondary" href="#">Хочу подарок</a>
-            </div>
+            <h3 class="bonus-card__header">Маршмеллоу даром!</h3>
+            <p class="bonus-card__description">При покупке 2 кг пломбира добавим в ваш заказ упаковку нежных зефирок совершенно бесплатно.</p>
+            <a class="bonus-card__button button button--secondary" href="#">Хочу подарок</a>
             <img class="bonus-card__img" src="images/content/bonus-marshmallow.png" width="219" height="268" alt="Вафельный рожок с маршмеллоу." >
           </article>
         </div>
@@ -245,27 +241,23 @@
       <section class="popular">
         <h2 class="popular__title title">Попробуйте самые популярные<br>вкусы нашего мороженого</h2>
         <ul class="popular__list">
-          <li class="product-card product-card--index">
+          <li class="product-card">
             <a class="product-card__link product-card__picture" href="#">
               <img class="product-card__img" src="images/content/catalog/raspberry.jpg" width="168" height="168" alt="Малиновое мороженое." >
             </a>
-            <div class="product-card__wrapper">
-              <a class="product-card__link" href="#">
-                <h3 class="product-card__header">Малинка</h3>
-              </a>
-              <p class="product-card__description">Сливочное мороженое с малиновым джемом</p>
-              <div class="product-card__bottom">
-                <b class="product-card__price">310 &#8381;/кг</b>
-                <a class="product-card__button" href="#">
-                  <svg class="product-card__icon" width="15" height="14" xmlns="http://www.w3.org/2000/svg">
-                    <use href="images/icons/sprite.svg#cart"></use>
-                  </svg>
-                  <span class="visually-hidden">Добавить в корзину</span>
-                </a>
-              </div>
-            </div>
+            <a class="product-card__link" href="#">
+              <h3 class="product-card__header">Малинка</h3>
+            </a>
+            <p class="product-card__description">Сливочное мороженое с малиновым джемом</p>
+            <b class="product-card__price">310 &#8381;/кг</b>
+            <a class="product-card__button" href="#">
+              <svg class="product-card__icon" width="15" height="14" xmlns="http://www.w3.org/2000/svg">
+                <use href="images/icons/sprite.svg#cart"></use>
+              </svg>
+              <span class="visually-hidden">Добавить в корзину</span>
+            </a>
           </li>
-          <li class="product-card product-card--index">
+          <li class="product-card">
             <a class="product-card__link product-card__picture" href="#">
               <img class="product-card__img" src="images/content/catalog/pistachio.jpg" width="168" height="168" alt="Фисташковое мороженое.">
             </a>
@@ -364,24 +356,22 @@
           <p class="delivery__description">Хочется полакомиться любимым десертом, но нет времени съездить в магазин? Закажите доставку мороженого на дом, и курьер привезёт вам ваш заказ в течение часа!</p>
         </div>
         <form class="delivery__form form" action="https://echo.htmlacademy.ru/" method="post" >
-          <p class="form__description">Укажите адрес и дату доставки, и мы свяжемся с вами, чтобы подтвердить заказ.</p>
-          <div class="delivery__form-wrapper">
-            <div class="delivery__form--date form__item">
-              <p class="form__tooltip" hidden>Введите дату</p>
-              <label class="form__label form__label--date" for="delivery-date">Дата </label>
-              <input class="form__input" type="text" id="delivery-date" name="delivery-date" placeholder="01.04.2020"  >
-            </div>
-            <div class="delivery__form--phone form__item">
-              <label class="form__label" for="delivery-phone">Телефон </label>
-              <input class="form__input" type="tel" id="delivery-phone" name="delivery-phone" placeholder="+7 800 999-00-00">
-            </div>
+          <p class="delivery__caption form__description">Укажите адрес и дату доставки, и мы свяжемся с вами, чтобы подтвердить заказ.</p>
+          <div class="delivery__date form__item">
+            <p class="form__tooltip" hidden>Введите дату</p>
+            <label class="form__label form__label--date" for="delivery-date">Дата </label>
+            <input class="form__input" type="text" id="delivery-date" name="delivery-date" placeholder="01.04.2020"  >
           </div>
-          <div class="delivery__form--address form__item">
+          <div class="delivery__phone form__item">
+            <label class="form__label" for="delivery-phone">Телефон </label>
+            <input class="form__input" type="tel" id="delivery-phone" name="delivery-phone" placeholder="+7 800 999-00-00">
+          </div>
+          <div class="delivery__address form__item">
             <p class="form__tooltip" hidden>Введите название улицы, дома и квартиры</p>
             <label class="form__label form__label--address" for="delivery-address">Адрес </label>
             <input class="form__input" type="text" id="delivery-address" name="delivery-address" placeholder="ул. Большая Конюшенная, 19/8">
           </div>
-          <button class="delivery__form--button button button--primary" type="submit">Отправить</button>
+          <button class="delivery__button button button--primary" type="submit">Отправить</button>
         </form>
       </section>
       <section class="contacts">
