@@ -8,19 +8,19 @@
 </head>
 <body class="page">
   <div class="page__container">
-    <header class="header">
+    <header class="catalog__header header">
       <nav class="main-nav">
         <a class="logo" href="index.html">
           <img class="logo__img" src="images/content/logo.svg" width="137" height="56" alt="Логотип &laquo;GllacyShop&raquo;.">
         </a>
         <ul class="site-nav">
           <li class="site-nav__item">
-            <a class="catalog-nav-list__link" href="#">Каталог
+            <a class="site-nav__link" href="#">Каталог
               <svg width="16" height="16" xmlns="http://www.w3.org/2000/svg">
                 <use href="images/icons/sprite.svg#arrow-down"></use>
               </svg>
             </a>
-            <ul class="catalog-nav-list">
+            <ul class="catalog-nav-list" hidden>
               <li class="catalog-nav-list__item">
                 <a class="catalog-nav-list__link" href="index.html">Новинки</a>
               </li>
@@ -50,9 +50,9 @@
             <a class="user-nav__link user-nav__link--phone" href="tel:+78005558628">+7 800 555-86-28</a>
           </li>
           <li class="user-nav__item">
-            <form class="form" action="https://echo.htmlacademy.ru/" method="get">
+            <form class="form form--user-nav" action="https://echo.htmlacademy.ru/" method="get">
               <label class="visually-hidden" for="search">Поиск по сайту.</label>
-              <input class="form__input" type="search" id="search" name="search" placeholder="Поиск по сайту">
+              <input class="form__input" type="search" id="search" name="search" placeholder="Поиск по сайту" hidden>
               <button class="form__button--search" type="submit">
                 <svg width="14" height="14" xmlns="http://www.w3.org/2000/svg">
                   <use href="images/icons/sprite.svg#search"></use>
@@ -82,7 +82,7 @@
             </div>
           </li>
           <li class="user-nav__item cart">
-            <a class="cart__link" href="#">
+            <a class="user-nav__link cart__link" href="#">
               <span class="visually-hidden">Корзина</span>
               <svg width="15" height="14" xmlns="http://www.w3.org/2000/svg">
                 <use href="images/icons/sprite.svg#cart"></use>
@@ -151,41 +151,49 @@
         <form class="filter-form" action="https://echo.htmlacademy.ru/" method="get">
           <fieldset class="filter-sort">
             <legend class="filter-sort__caption">Сортировка:</legend>
-            <label class="visually-hidden" for="sort">Выберите метод сортировки</label>
-            <select class="filter-sort__list" name="sort" id="sort">
-              <option class="filter-sort__item" value="popularity">по популярности</option>
-            </select>
+            <div class="filter__wrapper">
+              <label class="visually-hidden" for="sort">Выберите метод сортировки</label>
+              <select class="filter-sort__list" name="sort" id="sort">
+                <option class="filter-sort__item" value="popularity">по популярности</option>
+              </select>
+            </div>
           </fieldset>
           <fieldset class="filter-price">
             <legend class="filter-price__caption">Цена: <span class="filter-price__price filter-price__price--min">100</span> &#8381; – <span class="filter-price__price filter-price__price--max">500</span> &#8381;</legend>
-            <label class="visually-hidden" for="min-price">Минимальная цена</label>
-            <input type="range" class="filter-price__input filter-price__input--min" id="min-price" name="min-price">
-            <label class="visually-hidden" for="max-price">Максимальная цена</label>
-            <input type="range" class="filter-price__input filter-price__input--max" id="max-price" name="max-price">
+            <div class="filter__wrapper">
+              <label class="visually-hidden" for="min-price">Минимальная цена</label>
+              <input type="range" class="filter-price__input filter-price__input--min" id="min-price" name="min-price" min="0" max="1000" value="250">
+              <label class="visually-hidden" for="max-price">Максимальная цена</label>
+              <input type="range" class="filter-price__input filter-price__input--max" id="max-price" name="max-price" min="0" max="1000" value="750">
+            </div>
           </fieldset>
           <fieldset class="filter-fat">
             <legend class="filter-fat__caption">Жирность:</legend>
-            <input type="radio" id="fat-0" name="fat" class="filter-fat__radio" value="0">
-            <label class="filter-fat__label" for="fat-0">0%</label>
-            <input type="radio" id="fat-10" name="fat" class="filter-fat__radio" value="10" checked>
-            <label class="filter-fat__label" for="fat-10">до 10%</label>
-            <input type="radio" id="fat-30" name="fat" class="filter-fat__radio" value="30">
-            <label class="filter-fat__label" for="fat-30">до 30%</label>
-            <input type="radio" id="fat-over-30" name="fat" class="filter-fat__radio" value="over 30">
-            <label class="filter-fat__label" for="fat-over-30">выше 30%</label>
+            <div class="filter__wrapper">
+              <input type="radio" id="fat-0" name="fat" class="filter-fat__radio" value="0">
+              <label class="filter-fat__label" for="fat-0">0%</label>
+              <input type="radio" id="fat-10" name="fat" class="filter-fat__radio" value="10" checked>
+              <label class="filter-fat__label" for="fat-10">до 10%</label>
+              <input type="radio" id="fat-30" name="fat" class="filter-fat__radio" value="30">
+              <label class="filter-fat__label" for="fat-30">до 30%</label>
+              <input type="radio" id="fat-over-30" name="fat" class="filter-fat__radio" value="over 30">
+              <label class="filter-fat__label" for="fat-over-30">выше 30%</label>
+            </div>
           </fieldset>
           <fieldset class="filter-ext">
             <legend class="filter-ext__caption">Наполнители:</legend>
-            <input type="checkbox" id="ext-chocolate" name="ext-chocolate" class="filter-ext__checkbox" checked>
-            <label class="filter-ext__label" for="ext-chocolate">шоколадные</label>
-            <input type="checkbox" id="ext-sugar" name="ext-sugar" class="filter-ext__checkbox" checked>
-            <label class="filter-ext__label" for="ext-sugar">сахарные посыпки</label>
-            <input type="checkbox" id="ext-fruit" name="ext-fruit" class="filter-ext__checkbox">
-            <label class="filter-ext__label" for="ext-fruit">фрукты</label>
-            <input type="checkbox" id="ext-syrups" name="ext-syrups" class="filter-ext__checkbox">
-            <label class="filter-ext__label" for="ext-syrups">сиропы</label>
-            <input type="checkbox" id="ext-jams" name="ext-jams" class="filter-ext__checkbox">
-            <label class="filter-ext__label" for="ext-jams">джемы</label>
+            <div class="filter__wrapper">
+              <input type="checkbox" id="ext-chocolate" name="ext-chocolate" class="filter-ext__checkbox" checked>
+              <label class="filter-ext__label" for="ext-chocolate">шоколадные</label>
+              <input type="checkbox" id="ext-sugar" name="ext-sugar" class="filter-ext__checkbox" checked>
+              <label class="filter-ext__label" for="ext-sugar">сахарные посыпки</label>
+              <input type="checkbox" id="ext-fruit" name="ext-fruit" class="filter-ext__checkbox">
+              <label class="filter-ext__label" for="ext-fruit">фрукты</label>
+              <input type="checkbox" id="ext-syrups" name="ext-syrups" class="filter-ext__checkbox">
+              <label class="filter-ext__label" for="ext-syrups">сиропы</label>
+              <input type="checkbox" id="ext-jams" name="ext-jams" class="filter-ext__checkbox">
+              <label class="filter-ext__label" for="ext-jams">джемы</label>
+            </div>
           </fieldset>
           <button type="submit" class="button filter__button">Применить</button>
         </form>
@@ -193,173 +201,245 @@
       <section class="products">
         <h2 class="visually-hidden">Список продуктов.</h2>
         <ul class="products__list">
-          <li class="products__item product-card">
-            <a class="product-card__link" href="#">
+          <li class="product-card">
+            <a class="product-card__link product-card__picture" href="#">
               <img class="product-card__img" src="images/content/catalog/raspberry.jpg" width="168" height="168" alt="Малиновое мороженое.">
-              <h3 class="product-card__header">Малинка</h3>
             </a>
-            <p class="product-card__description">Сливочное мороженое с малиновым джемом</p>
-            <b class="product-card__price">310 &#8381;/кг</b>
-            <a class="product-card__button" href="#">
-              <svg width="15" height="14" xmlns="http://www.w3.org/2000/svg">
-                <use href="images/icons/sprite.svg#cart"></use>
-              </svg>
-              <span class="visually-hidden">Добавить в корзину</span>
-            </a>
+            <div class="product-card__wrapper">
+              <a class="product-card__link" href="#">
+                <h3 class="product-card__header">Малинка</h3>
+              </a>
+              <p class="product-card__description">Сливочное мороженое с малиновым джемом</p>
+              <div class="product-card__bottom">
+                <b class="product-card__price">310 &#8381;/кг</b>
+                <a class="product-card__button" href="#">
+                  <svg class="product-card__icon" width="15" height="14" xmlns="http://www.w3.org/2000/svg">
+                    <use href="images/icons/sprite.svg#cart"></use>
+                  </svg>
+                  <span class="visually-hidden">Добавить в корзину</span>
+                </a>
+              </div>
+            </div>
           </li>
-          <li class="products__item product-card">
-            <a class="product-card__link" href="#">
+          <li class="product-card">
+            <a class="product-card__link product-card__picture" href="#">
               <img class="product-card__img" src="images/content/catalog/pistachio.jpg" width="168" height="168" alt="Фисташковое мороженое.">
-              <h3 class="product-card__header">Фисташка</h3>
             </a>
-            <p class="product-card__description">Фисташковый пломбир с кусочками шоколада</p>
-            <b class="product-card__price">340 &#8381;/кг</b>
-            <a class="product-card__button" href="#">
-              <svg width="15" height="14" xmlns="http://www.w3.org/2000/svg">
-                <use href="images/icons/sprite.svg#cart"></use>
-              </svg>
-              <span class="visually-hidden">Добавить в корзину</span>
-            </a>
+            <div class="product-card__wrapper">
+              <a class="product-card__link" href="#">
+                <h3 class="product-card__header">Фисташка</h3>
+              </a>
+              <p class="product-card__description">Фисташковый пломбир с кусочками шоколада</p>
+              <div class="product-card__bottom">
+                <b class="product-card__price">340 &#8381;/кг</b>
+                <a class="product-card__button" href="#">
+                  <svg class="product-card__icon" width="15" height="14" xmlns="http://www.w3.org/2000/svg">
+                    <use href="images/icons/sprite.svg#cart"></use>
+                  </svg>
+                  <span class="visually-hidden">Добавить в корзину</span>
+                </a>
+              </div>
+            </div>
           </li>
-          <li class="products__item product-card">
-            <a class="product-card__link" href="#">
+          <li class="product-card">
+            <a class="product-card__link product-card__picture" href="#">
               <img class="product-card__img" src="images/content/catalog/blueberry.jpg" width="168" height="168" alt="Черничное мороженое.">
-              <h3 class="product-card__header">Черника</h3>
             </a>
-            <p class="product-card__description">Крем-брюле с черничным джемом</p>
-            <b class="product-card__price">330 &#8381;/кг</b>
-            <a class="product-card__button" href="#">
-              <svg width="15" height="14" xmlns="http://www.w3.org/2000/svg">
-                <use href="images/icons/sprite.svg#cart"></use>
-              </svg>
-              <span class="visually-hidden">Добавить в корзину</span>
-            </a>
+            <div class="product-card__wrapper">
+              <a class="product-card__link" href="#">
+                <h3 class="product-card__header">Черника</h3>
+              </a>
+              <p class="product-card__description">Крем-брюле с черничным джемом</p>
+              <div class="product-card__bottom">
+                <b class="product-card__price">330 &#8381;/кг</b>
+                <a class="product-card__button" href="#">
+                  <svg class="product-card__icon" width="15" height="14" xmlns="http://www.w3.org/2000/svg">
+                    <use href="images/icons/sprite.svg#cart"></use>
+                  </svg>
+                  <span class="visually-hidden">Добавить в корзину</span>
+                </a>
+              </div>
+            </div>
           </li>
-          <li class="products__item product-card">
-            <a class="product-card__link" href="#">
+          <li class="product-card">
+            <a class="product-card__link product-card__picture" href="#">
               <img class="product-card__img" src="images/content/catalog/bubble-gum.jpg" width="168" height="168" alt="Ванильное мороженое.">
-              <h3 class="product-card__header">Бабл-гам</h3>
             </a>
-            <p class="product-card__description">Ванильный пломбир со сладкой посыпкой</p>
-            <b class="product-card__price">320 &#8381;/кг</b>
-            <a class="product-card__button" href="#">
-              <svg width="15" height="14" xmlns="http://www.w3.org/2000/svg">
-                <use href="images/icons/sprite.svg#cart"></use>
-              </svg>
-              <span class="visually-hidden">Добавить в корзину</span>
-            </a>
+            <div class="product-card__wrapper">
+              <a class="product-card__link" href="#">
+                <h3 class="product-card__header">Бабл-гам</h3>
+              </a>
+              <p class="product-card__description">Ванильный пломбир со сладкой посыпкой</p>
+              <div class="product-card__bottom">
+                <b class="product-card__price">320 &#8381;/кг</b>
+                <a class="product-card__button" href="#">
+                  <svg class="product-card__icon" width="15" height="14" xmlns="http://www.w3.org/2000/svg">
+                    <use href="images/icons/sprite.svg#cart"></use>
+                  </svg>
+                  <span class="visually-hidden">Добавить в корзину</span>
+                </a>
+              </div>
+            </div>
           </li>
-          <li class="products__item product-card">
-            <a class="product-card__link" href="#">
+          <li class="product-card">
+            <a class="product-card__link product-card__picture" href="#">
               <img class="product-card__img" src="images/content/catalog/blackberry.jpg" width="168" height="168" alt="Ежевичное мороженое.">
-              <h3 class="product-card__header">Ежевика</h3>
             </a>
-            <p class="product-card__description">Сливочное мороженое с ежевичным джемом</p>
-            <b class="product-card__price">330 &#8381;/кг</b>
-            <a class="product-card__button" href="#">
-              <svg width="15" height="14" xmlns="http://www.w3.org/2000/svg">
-                <use href="images/icons/sprite.svg#cart"></use>
-              </svg>
-              <span class="visually-hidden">Добавить в корзину</span>
-            </a>
+            <div class="product-card__wrapper">
+              <a class="product-card__link" href="#">
+                <h3 class="product-card__header">Ежевика</h3>
+              </a>
+              <p class="product-card__description">Сливочное мороженое с ежевичным джемом</p>
+              <div class="product-card__bottom">
+                <b class="product-card__price">330 &#8381;/кг</b>
+                <a class="product-card__button" href="#">
+                  <svg class="product-card__icon" width="15" height="14" xmlns="http://www.w3.org/2000/svg">
+                    <use href="images/icons/sprite.svg#cart"></use>
+                  </svg>
+                  <span class="visually-hidden">Добавить в корзину</span>
+                </a>
+              </div>
+            </div>
           </li>
-          <li class="products__item product-card">
-            <a class="product-card__link" href="#">
+          <li class="product-card">
+            <a class="product-card__link product-card__picture" href="#">
               <img class="product-card__img" src="images/content/catalog/banana.jpg" width="168" height="168" alt="Банановое мороженое.">
-              <h3 class="product-card__header">Банан</h3>
+            </a>
+            <div class="product-card__wrapper">
+              <a class="product-card__link" href="#">
+                <h3 class="product-card__header">Банан</h3>
+              </a>
               <p class="product-card__description">Сливочный пломбир с банановым вкусом</p>
-            </a>
-            <b class="product-card__price">340 &#8381;/кг</b>
-            <a class="product-card__button" href="#">
-              <svg width="15" height="14" xmlns="http://www.w3.org/2000/svg">
-                <use href="images/icons/sprite.svg#cart"></use>
-              </svg>
-              <span class="visually-hidden">Добавить в корзину</span>
-            </a>
+              <div class="product-card__bottom">
+                <b class="product-card__price">340 &#8381;/кг</b>
+                <a class="product-card__button" href="#">
+                  <svg class="product-card__icon" width="15" height="14" xmlns="http://www.w3.org/2000/svg">
+                    <use href="images/icons/sprite.svg#cart"></use>
+                  </svg>
+                  <span class="visually-hidden">Добавить в корзину</span>
+                </a>
+              </div>
+            </div>
           </li>
-          <li class="products__item product-card">
-            <a class="product-card__link" href="#">
+          <li class="product-card">
+            <a class="product-card__link product-card__picture" href="#">
               <img class="product-card__img" src="images/content/catalog/chocolate.jpg" width="168" height="168" alt="Шоколадное мороженое.">
-              <h3 class="product-card__header">Шоколадка</h3>
             </a>
-            <p class="product-card__description">Классический шоколадный пломбир</p>
-            <b class="product-card__price">270 &#8381;/кг</b>
-            <a class="product-card__button" href="#">
-              <svg width="15" height="14" xmlns="http://www.w3.org/2000/svg">
-                <use href="images/icons/sprite.svg#cart"></use>
-              </svg>
-              <span class="visually-hidden">Добавить в корзину</span>
-            </a>
+            <div class="product-card__wrapper">
+              <a class="product-card__link" href="#">
+                <h3 class="product-card__header">Шоколадка</h3>
+              </a>
+              <p class="product-card__description">Классический шоколадный пломбир</p>
+              <div class="product-card__bottom">
+                <b class="product-card__price">270 &#8381;/кг</b>
+                <a class="product-card__button" href="#">
+                  <svg class="product-card__icon" width="15" height="14" xmlns="http://www.w3.org/2000/svg">
+                    <use href="images/icons/sprite.svg#cart"></use>
+                  </svg>
+                  <span class="visually-hidden">Добавить в корзину</span>
+                </a>
+              </div>
+            </div>
           </li>
-          <li class="products__item product-card">
-            <a class="product-card__link" href="#">
+          <li class="product-card">
+            <a class="product-card__link product-card__picture" href="#">
               <img class="product-card__img" src="images/content/catalog/strawberry.jpg" width="168" height="168" alt="Клубничное мороженое.">
-              <h3 class="product-card__header">Клубничка</h3>
             </a>
-            <p class="product-card__description">Сливочный пломбир с клубничным вкусом</p>
-            <b class="product-card__price">300 &#8381;/кг</b>
-            <a class="product-card__button" href="#">
-              <svg width="15" height="14" xmlns="http://www.w3.org/2000/svg">
-                <use href="images/icons/sprite.svg#cart"></use>
-              </svg>
-              <span class="visually-hidden">Добавить в корзину</span>
-            </a>
+            <div class="product-card__wrapper">
+              <a class="product-card__link" href="#">
+                <h3 class="product-card__header">Клубничка</h3>
+              </a>
+              <p class="product-card__description">Сливочный пломбир с клубничным вкусом</p>
+              <div class="product-card__bottom">
+                <b class="product-card__price">300 &#8381;/кг</b>
+                <a class="product-card__button" href="#">
+                  <svg class="product-card__icon" width="15" height="14" xmlns="http://www.w3.org/2000/svg">
+                    <use href="images/icons/sprite.svg#cart"></use>
+                  </svg>
+                  <span class="visually-hidden">Добавить в корзину</span>
+                </a>
+              </div>
+            </div>
           </li>
-          <li class="products__item product-card">
-            <a class="product-card__link" href="#">
+          <li class="product-card">
+            <a class="product-card__link product-card__picture" href="#">
               <img class="product-card__img" src="images/content/catalog/lemon.jpg" width="168" height="168" alt="Лимонный сорбет.">
-              <h3 class="product-card__header">Лимон</h3>
+            </a>
+            <div class="product-card__wrapper">
+              <a class="product-card__link" href="#">
+                <h3 class="product-card__header">Лимон</h3>
+              </a>
               <p class="product-card__description">Освежающий лимонный сорбет</p>
-            </a>
-            <b class="product-card__price">310 &#8381;/кг</b>
-            <a class="product-card__button" href="#">
-              <svg width="15" height="14" xmlns="http://www.w3.org/2000/svg">
-                <use href="images/icons/sprite.svg#cart"></use>
-              </svg>
-              <span class="visually-hidden">Добавить в корзину</span>
-            </a>
+              <div class="product-card__bottom">
+                <b class="product-card__price">310 &#8381;/кг</b>
+                <a class="product-card__button" href="#">
+                  <svg class="product-card__icon" width="15" height="14" xmlns="http://www.w3.org/2000/svg">
+                    <use href="images/icons/sprite.svg#cart"></use>
+                  </svg>
+                  <span class="visually-hidden">Добавить в корзину</span>
+                </a>
+              </div>
+            </div>
           </li>
-          <li class="products__item product-card">
-            <a class="product-card__link" href="#">
+          <li class="product-card">
+            <a class="product-card__link product-card__picture" href="#">
               <img class="product-card__img" src="images/content/catalog/menthol.jpg" width="168" height="168" alt="Ментоловое мороженое.">
-              <h3 class="product-card__header">Ментол</h3>
             </a>
-            <p class="product-card__description">Сливочный пломбир с ментоловым сиропом</p>
-            <b class="product-card__price">320 &#8381;/кг</b>
-            <a class="product-card__button" href="#">
-              <svg width="15" height="14" xmlns="http://www.w3.org/2000/svg">
-                <use href="images/icons/sprite.svg#cart"></use>
-              </svg>
-              <span class="visually-hidden">Добавить в корзину</span>
-            </a>
+            <div class="product-card__wrapper">
+              <a class="product-card__link" href="#">
+                <h3 class="product-card__header">Ментол</h3>
+              </a>
+              <p class="product-card__description">Сливочный пломбир с ментоловым сиропом</p>
+              <div class="product-card__bottom">
+                <b class="product-card__price">320 &#8381;/кг</b>
+                <a class="product-card__button" href="#">
+                  <svg class="product-card__icon" width="15" height="14" xmlns="http://www.w3.org/2000/svg">
+                    <use href="images/icons/sprite.svg#cart"></use>
+                  </svg>
+                  <span class="visually-hidden">Добавить в корзину</span>
+                </a>
+              </div>
+            </div>
           </li>
-          <li class="products__item product-card">
-            <a class="product-card__link" href="#">
+          <li class="product-card">
+            <a class="product-card__link product-card__picture" href="#">
               <img class="product-card__img" src="images/content/catalog/nut.jpg" width="168" height="168" alt="Фисташковое мороженое с шоколадом.">
-              <h3 class="product-card__header">Орешек</h3>
             </a>
-            <p class="product-card__description">Фисташковый пломбир с шоколадным сиропом</p>
-            <b class="product-card__price">360 &#8381;/кг</b>
-            <a class="product-card__button" href="#">
-              <svg width="15" height="14" xmlns="http://www.w3.org/2000/svg">
-                <use href="images/icons/sprite.svg#cart"></use>
-              </svg>
-              <span class="visually-hidden">Добавить в корзину</span>
-            </a>
+            <div class="product-card__wrapper">
+              <a class="product-card__link" href="#">
+                <h3 class="product-card__header">Орешек</h3>
+              </a>
+              <p class="product-card__description">Фисташковый пломбир с шоколадным сиропом</p>
+              <div class="product-card__bottom">
+                <b class="product-card__price">360 &#8381;/кг</b>
+                <a class="product-card__button" href="#">
+                  <svg class="product-card__icon" width="15" height="14" xmlns="http://www.w3.org/2000/svg">
+                    <use href="images/icons/sprite.svg#cart"></use>
+                  </svg>
+                  <span class="visually-hidden">Добавить в корзину</span>
+                </a>
+              </div>
+            </div>
           </li>
-          <li class="products__item product-card">
-            <a class="product-card__link" href="#">
+          <li class="product-card">
+            <a class="product-card__link product-card__picture" href="#">
               <img class="product-card__img" src="images/content/catalog/сreme-brulee.jpg" width="168" height="168" alt="Мороженое крем-брюле.">
-              <h3 class="product-card__header">Крем-брюле</h3>
             </a>
-            <p class="product-card__description">Классическое крем-брюле</p>
-            <b class="product-card__price">280 &#8381;/кг</b>
-            <a class="product-card__button" href="#">
-              <svg width="15" height="14" xmlns="http://www.w3.org/2000/svg">
-                <use href="images/icons/sprite.svg#cart"></use>
-              </svg>
-              <span class="visually-hidden">Добавить в корзину</span>
-            </a>
+            <div class="product-card__wrapper">
+              <a class="product-card__link" href="#">
+                <h3 class="product-card__header">Крем-брюле</h3>
+              </a>
+              <p class="product-card__description">Классическое крем-брюле</p>
+              <div class="product-card__bottom">
+                <b class="product-card__price">280 &#8381;/кг</b>
+                <a class="product-card__button" href="#">
+                  <svg class="product-card__icon" width="15" height="14" xmlns="http://www.w3.org/2000/svg">
+                    <use href="images/icons/sprite.svg#cart"></use>
+                  </svg>
+                  <span class="visually-hidden">Добавить в корзину</span>
+                </a>
+              </div>
+            </div>
           </li>
         </ul>
         <div class="products__bottom">
@@ -369,9 +449,9 @@
               <svg width="16" height="16" fill="" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M8.86 13.14a.66.66 0 0 0 .95-.95L5.6 8l4.2-4.2a.67.67 0 0 0-.95-.94L4.2 7.52a.66.66 0 0 0 0 .94l4.66 4.68Z"/></svg>
               <span class="visually-hidden">Назад</span>
             </a>
-            <a class="pagination__link" href="#" >1</a>
+            <a class="pagination__link pagination__link--current" href="#" >1</a>
             <a class="pagination__link" href="#">2</a>
-            <a class="pagination__link pagination__link--current">3</a>
+            <a class="pagination__link">3</a>
             <a class="pagination__link" href="#">4</a>
             <a class="pagination__link" href="#">5</a>
             <a class="pagination__link pagination__link--forward" href="#">
@@ -384,7 +464,7 @@
         </div>
       </section>
     </main>
-    <footer class="footer">
+    <footer class="catalog__footer footer">
       <ul class="footer__social-list social-list">
         <li class="social-list__item">
           <a class="social-list__link" href="https://t.me/htmlacademy" target="_blank">
@@ -395,7 +475,7 @@
           </a>
         </li>
         <li class="social-list__item">
-          <a class="social-list__link" href="https://vk.com/htmlacademy"  target="_blank">
+          <a class="social-list__link" href="https://vk.com/htmlacademy" target="_blank">
             <svg class="social-list__icon" width="24" height="24" fill="" xmlns="http://www.w3.org/2000/svg">
               <use href="images/icons/sprite.svg#vk"></use>
             </svg>
@@ -403,7 +483,7 @@
           </a>
         </li>
         <li class="social-list__item">
-          <a class="social-list__link" href="https://www.youtube.com/user/htmlacademyru"  target="_blank">
+          <a class="social-list__link" href="https://www.youtube.com/user/htmlacademyru" target="_blank">
             <svg class="social-list__icon"  width="24" height="24" xmlns="http://www.w3.org/2000/svg">
               <use href="images/icons/sprite.svg#youtube"></use>
             </svg>
