@@ -15,12 +15,12 @@
         </a>
         <ul class="site-nav">
           <li class="site-nav__item">
-            <a class="site-nav__link" href="#">Каталог
-              <svg width="16" height="16" xmlns="http://www.w3.org/2000/svg">
+            <a class="site-nav__link site-nav__link--catalog" href="catalog.html">Каталог
+              <svg class="site-nav__icon" width="16" height="16" xmlns="http://www.w3.org/2000/svg">
                 <use href="images/icons/sprite.svg#arrow-down"></use>
               </svg>
             </a>
-            <ul class="catalog-nav-list" hidden>
+            <ul class="catalog-nav-list">
               <li class="catalog-nav-list__item">
                 <a class="catalog-nav-list__link catalog-nav-list__link--current">Новинки</a>
               </li>
@@ -42,89 +42,84 @@
             <a class="site-nav__link" href="index.html#delivery">Доставка и оплата</a>
           </li>
           <li class="site-nav__item">
-            <a class="site-nav__link" href="index.html#about">О компании</a>
+            <a class="site-nav__link" href="">О компании</a>
           </li>
         </ul>
         <ul class="user-nav">
-          <li class="user-nav__item">
+          <li class="user-nav__item ">
             <a class="user-nav__link user-nav__link--phone" href="tel:+78005558628">+7 800 555-86-28</a>
           </li>
           <li class="user-nav__item">
+            <button class="user-nav__link user-nav__link--search" type="button" >
+              <svg class="user-nav__icon user-nav__icon--search" width="14" height="14" xmlns="http://www.w3.org/2000/svg">
+                <use href="images/icons/sprite.svg#search"></use>
+              </svg>
+              <span class="visually-hidden">Найти</span>
+            </button>
             <form class="form form--user-nav" action="https://echo.htmlacademy.ru/" method="get">
               <label class="visually-hidden" for="search">Поиск по сайту.</label>
-              <input class="form__input" type="search" id="search" name="search" placeholder="Поиск по сайту" hidden>
-              <button class="form__button--search" type="submit">
-                <svg width="14" height="14" xmlns="http://www.w3.org/2000/svg">
-                  <use href="images/icons/sprite.svg#search"></use>
-                </svg>
-                <span class="visually-hidden">Найти</span>
-              </button>
+              <input class="form__input" type="search" id="search" name="search" placeholder="Поиск по сайту" >
             </form>
           </li>
           <li class="user-nav__item">
-            <a href="#" class="user-nav__link">
-              <svg width="14" height="15" xmlns="http://www.w3.org/2000/svg">
+            <a href="#" class="user-nav__link user-nav__link--enter">
+              <svg class="user-nav__icon user-nav__icon--enter" width="14" height="15" xmlns="http://www.w3.org/2000/svg">
                 <use href="images/icons/sprite.svg#enter"></use>
               </svg>
               Вход
             </a>
-            <div class="personal-area-popup" hidden>
+            <div class="personal-area-popup">
               <h3 class="personal-area-popup__header">Личный кабинет</h3>
-              <form class="form" action="https://echo.htmlacademy.ru/" method="post">
+              <form class="personal-area-popup__form form" action="https://echo.htmlacademy.ru/" method="post">
                 <label class="visually-hidden" for="personal-area-email">Введите email</label>
-                <input class="form__input" type="email" id="personal-area-email" name="personal-area-email" placeholder="email@example.com">
+                <input class="personal-area-popup__input form__input" type="email" id="personal-area-email" name="personal-area-email" placeholder="email@example.com">
                 <label class="visually-hidden" for="personal-area-password">Введите пароль</label>
-                <input class="form__input" type="password" id="personal-area-password" name="personal-area-password">
-                <button class="button button--primary" type="submit">Войти</button>
-                <a class="form__link" href="#">Забыли пароль?</a>
-                <a class="form__link" href="#">Регистрация</a>
+                <input class="personal-area-popup__input personal-area-popup__input--password form__input" type="password" id="personal-area-password" name="personal-area-password">
+                <button class="personal-area-popup__button button button--primary" type="submit">Войти</button>
+                <a class="personal-area-popup__link personal-area-popup__link--recovery form__link" href="#">Забыли пароль?</a>
+                <a class="personal-area-popup__link personal-area-popup__link--registration form__link" href="#">Регистрация</a>
               </form>
             </div>
           </li>
           <li class="user-nav__item cart">
             <a class="user-nav__link cart__link" href="#">
               <span class="visually-hidden">Корзина</span>
-              <svg width="15" height="14" xmlns="http://www.w3.org/2000/svg">
+              <svg class="user-nav__icon user-nav__icon--cart" width="15" height="14" xmlns="http://www.w3.org/2000/svg">
                 <use href="images/icons/sprite.svg#cart"></use>
               </svg>
               <span class="cart__count">2 товара</span>
             </a>
-            <div class="cart-popup cart-popup--with-products" hidden>
+            <div class="cart-popup cart-popup--with-products">
               <h3 class="cart-popup__header">Корзина</h3>
-              <div class="cart-popup__row">
-                <a href="#">
-                  <img class="cart-popup__img" src="images/content/catalog/raspberry-small.jpg" width="46" height="46" alt="Малиновое мороженое.">
+              <a class="cart-popup__link cart-popup__link--picture" href="#">
+                <img class="cart-popup__img" src="images/content/catalog/raspberry-small.jpg" width="46" height="46" alt="Малиновое мороженое.">
+              </a>
+              <div class="cart-popup__product">
+                <a class="cart-popup__link" href="#">
+                  <p class="cart-popup__title">Малинка</p>
                 </a>
-                <div class="cart-popup__product">
-                  <a class="cart-popup__link" href="#">
-                    <p class="cart-popup__title">Малинка</p>
-                  </a>
-                  <p class="cart-popup__weight">1 кг х 310 &#8381;</p>
-                </div>
-                <p class="cart-popup__price">310 &#8381;</p>
-                <a class="cart-popup__delete" href="#">
-                  <span class="visually-hidden">Удалить из корзины.</span>
-                </a>
+                <p class="cart-popup__weight">1 кг х 310 &#8381;</p>
               </div>
-              <div class="cart-popup__row">
-                <a href="#">
-                  <img class="cart-popup__img" src="images/content/catalog/bubble-gum-small.jpg" width="46" height="46" alt="Мороженое бабл-гам." >
+              <p class="cart-popup__price">310 &#8381;</p>
+              <a class="cart-popup__delete" href="#">
+                <span class="visually-hidden">Удалить из корзины.</span>
+              </a>
+              <a class="cart-popup__link cart-popup__link--picture" href="#">
+                <img class="cart-popup__img" src="images/content/catalog/bubble-gum-small.jpg" width="46" height="46" alt="Мороженое бабл-гам." >
+              </a>
+              <div class="cart-popup__product">
+                <a class="cart-popup__link" href="#">
+                  <p class="cart-popup__title">Бабл-гам</p>
                 </a>
-                <div class="cart-popup__product">
-                  <a class="cart-popup__link" href="#">
-                    <p class="cart-popup__title">Бабл-гам</p>
-                  </a>
-                  <p class="cart-popup__weight">1,5 кг х 320 &#8381;</p>
-                </div>
-                <p class="cart-popup__price">480 &#8381;</p>
-                <a class="cart-popup__delete" href="#">
-                  <span class="visually-hidden">Удалить из корзины.</span>
-                </a>
+                <p class="cart-popup__weight">1,5 кг х 320 &#8381;</p>
               </div>
-              <div class="cart-popup__row cart-popup__row--total">
-                <a class="button button--primary" href="#">Оформить заказ</a>
-                <p class="cart-popup__price">Итого: 790 &#8381;</p>
-              </div>
+              <p class="cart-popup__price">480 &#8381;</p>
+              <a class="cart-popup__delete" href="#">
+                <span class="visually-hidden">Удалить из корзины.</span>
+              </a>
+              <hr class="cart-popup__separator">
+              <a class="cart-popup__button button button--primary" href="#">Оформить заказ</a>
+              <p class="cart-popup__price cart-popup__price--total">Итого: 790 &#8381;</p>
             </div>
             <div class="cart-popup cart-popup--empty" hidden>
               <h3 class="cart-popup__header cart-popup__header--empty">Ваша корзина пока пуста</h3>
