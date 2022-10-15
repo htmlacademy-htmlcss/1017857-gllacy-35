@@ -782,6 +782,25 @@
   opacity: 1;
 }
 
+.slider-dots__link:hover {
+  background: rgba(252, 252, 252, 0.3);
+  border: 1px solid #FCFCFC;
+  opacity: 1;
+}
+
+.slider-dots__link:focus {
+  background: rgba(252, 252, 252, 0.3);
+  border: 1px solid #2D3440;
+  outline: none;
+  opacity: 1;
+}
+
+.slider-dots__link:active {
+  background: #FCFCFC;
+  border: 1px solid #FCFCFC;
+  opacity: 0.5;
+}
+
 .promo__bottom {
   display: flex;
   justify-content: space-between;
