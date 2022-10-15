@@ -395,7 +395,8 @@
   font-size: 16px;
   font-weight: 700;
   background-color: transparent;
-  padding-right: 0;
+  /*padding-right: 0;*/
+  margin-right: -16px;
 }
 
 .personal-area-popup__header,
