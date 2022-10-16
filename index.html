@@ -416,18 +416,20 @@
       </div>
     </footer>
   </div>
-  <div class="modal">
-    <button class="modal__button">Закрыть окно</button>
-    <form class="form" action="https://echo.htmlacademy.ru/" method="post">
-      <p class="form__title">Мы обязательно ответим вам!</p>
-      <label class="visually-hidden" for="feedback-name">Введите Имя и Фамилию</label>
-      <input class="form__input" type="text" id="feedback-name" name="feedback-name" placeholder="Имя и фамилия">
-      <label class="visually-hidden" for="feedback-email">Введите email</label>
-      <input class="form__input" type="email" id="feedback-email" name="feedback-email" placeholder="email@example.com">
-      <label class="visually-hidden" for="feedback-message">Напишите сообщение</label>
-      <textarea class="form__textarea" id="feedback-message" name="feedback-message" placeholder="В свободной форме"></textarea>
-      <button class="form__button" type="submit">Отправить</button>
-    </form>
+  <div class="modal modal--closed">
+    <div class="modal__wrapper">
+      <button class="modal__button"><span class="visually-hidden">Закрыть окно</span></button>
+      <form class="form modal-form" action="https://echo.htmlacademy.ru/" method="post">
+        <p class="form__title form__title--modal">Мы обязательно ответим вам!</p>
+        <label class="visually-hidden" for="feedback-name">Введите Имя и Фамилию</label>
+        <input class="form__input" type="text" id="feedback-name" name="feedback-name" placeholder="Имя и фамилия">
+        <label class="visually-hidden" for="feedback-email">Введите email</label>
+        <input class="form__input" type="email" id="feedback-email" name="feedback-email" placeholder="email@example.com">
+        <label class="visually-hidden" for="feedback-message">Напишите сообщение</label>
+        <textarea class="form__textarea" id="feedback-message" name="feedback-message" placeholder="В свободной форме"></textarea>
+        <button class="form__button button button--primary" type="submit">Отправить</button>
+      </form>
+    </div>
   </div>
 </body>
 </html>
