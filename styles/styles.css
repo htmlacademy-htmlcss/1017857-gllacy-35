@@ -1520,6 +1520,8 @@
   width: 383px;
 }
 
+
+
 .filter-ext__label {
   position: relative;
   display: block;
@@ -1575,6 +1577,13 @@
   padding: 8px 16px;
   margin: 0;
   display: block;
+}
+
+.filter-fat__mark:focus,
+.filter-fat__mark:active,
+.filter-ext__mark:focus,
+.filter-ext__mark:active{
+  outline: 2px solid #FCFCFC;
 }
 
 /* products */
