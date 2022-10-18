@@ -340,8 +340,17 @@
         <form class="delivery__form form" action="https://echo.htmlacademy.ru/" method="post" >
           <p class="delivery__caption form__description">Укажите адрес и дату доставки, и мы свяжемся с вами, чтобы подтвердить заказ.</p>
           <div class="delivery__date form__item">
-            <p class="form__tooltip" hidden>Введите дату</p>
-            <label class="form__label form__label--date" for="delivery-date">Дата </label>
+            <span class="form__label">
+              <label class="form__label form__label--date" for="delivery-date">Дата </label>
+              <span class="tooltip tooltip--date">
+                <button class="tooltip-toggle" type="button" aria-labelledby="tooltip-label-date">
+                   <svg  class="tooltip-icon" width="14" height="14" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                     <path fill-rule="evenodd" clip-rule="evenodd" d="M7 2.13a4.88 4.88 0 1 0 0 9.75 4.88 4.88 0 0 0 0-9.75ZM.8 7a6.2 6.2 0 1 1 12.4 0A6.2 6.2 0 0 1 .8 7ZM7 6.33c.37 0 .67.3.67.67v2.22a.67.67 0 0 1-1.34 0V7c0-.37.3-.67.67-.67Zm0-2.21a.67.67 0 0 0 0 1.33.67.67 0 0 0 0-1.33Z"/>
+                   </svg>
+                </button>
+                <span class="tooltip-text" role="tooltip" id="tooltip-label-date">Введите дату</span>
+              </span>
+            </span>
             <input class="form__input" type="text" id="delivery-date" name="delivery-date" placeholder="01.04.2020"  >
           </div>
           <div class="delivery__phone form__item">
@@ -349,8 +358,17 @@
             <input class="form__input" type="tel" id="delivery-phone" name="delivery-phone" placeholder="+7 800 999-00-00">
           </div>
           <div class="delivery__address form__item">
-            <p class="form__tooltip" hidden>Введите название улицы, дома и квартиры</p>
-            <label class="form__label form__label--address" for="delivery-address">Адрес </label>
+            <span class="form__label">
+              <label class="form__label form__label--address" for="delivery-address">Адрес </label>
+              <span class="tooltip tooltip--address">
+                <button class="tooltip-toggle" type="button" aria-labelledby="tooltip-label-address">
+                   <svg  class="tooltip-icon" width="14" height="14" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                     <path fill-rule="evenodd" clip-rule="evenodd" d="M7 2.13a4.88 4.88 0 1 0 0 9.75 4.88 4.88 0 0 0 0-9.75ZM.8 7a6.2 6.2 0 1 1 12.4 0A6.2 6.2 0 0 1 .8 7ZM7 6.33c.37 0 .67.3.67.67v2.22a.67.67 0 0 1-1.34 0V7c0-.37.3-.67.67-.67Zm0-2.21a.67.67 0 0 0 0 1.33.67.67 0 0 0 0-1.33Z"/>
+                   </svg>
+                </button>
+                <span class="tooltip-text" role="tooltip" id="tooltip-label-address">Введите название улицы, дома и квартиры</span>
+              </span>
+            </span>
             <input class="form__input" type="text" id="delivery-address" name="delivery-address" placeholder="ул. Большая Конюшенная, 19/8">
           </div>
           <button class="delivery__button button button--primary" type="submit">Отправить</button>
@@ -417,18 +435,20 @@
       </div>
     </footer>
   </div>
-  <div class="modal">
-    <button class="modal__button">Закрыть окно</button>
-    <form class="form" action="https://echo.htmlacademy.ru/" method="post">
-      <p class="form__title">Мы обязательно ответим вам!</p>
-      <label class="visually-hidden" for="feedback-name">Введите Имя и Фамилию</label>
-      <input class="form__input" type="text" id="feedback-name" name="feedback-name" placeholder="Имя и фамилия">
-      <label class="visually-hidden" for="feedback-email">Введите email</label>
-      <input class="form__input" type="email" id="feedback-email" name="feedback-email" placeholder="email@example.com">
-      <label class="visually-hidden" for="feedback-message">Напишите сообщение</label>
-      <textarea class="form__textarea" id="feedback-message" name="feedback-message" placeholder="В свободной форме"></textarea>
-      <button class="form__button" type="submit">Отправить</button>
-    </form>
+  <div class="modal modal--closed">
+    <div class="modal__wrapper">
+      <button class="modal__button"><span class="visually-hidden">Закрыть окно</span></button>
+      <form class="form modal-form" action="https://echo.htmlacademy.ru/" method="post">
+        <p class="form__title form__title--modal">Мы обязательно ответим вам!</p>
+        <label class="visually-hidden" for="feedback-name">Введите Имя и Фамилию</label>
+        <input class="form__input" type="text" id="feedback-name" name="feedback-name" placeholder="Имя и фамилия">
+        <label class="visually-hidden" for="feedback-email">Введите email</label>
+        <input class="form__input" type="email" id="feedback-email" name="feedback-email" placeholder="email@example.com">
+        <label class="visually-hidden" for="feedback-message">Напишите сообщение</label>
+        <textarea class="form__textarea" id="feedback-message" name="feedback-message" placeholder="В свободной форме"></textarea>
+        <button class="form__button button button--primary" type="submit">Отправить</button>
+      </form>
+    </div>
   </div>
 </body>
 </html>

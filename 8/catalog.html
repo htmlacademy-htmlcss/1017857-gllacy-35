@@ -15,7 +15,7 @@
           <img class="logo__img" src="images/content/logo.svg" width="137" height="56" alt="Логотип &laquo;GllacyShop&raquo;.">
         </a>
         <ul class="site-nav">
-          <li class="site-nav__item">
+          <li class="site-nav__item site-nav__item--catalog">
             <a class="site-nav__link site-nav__link--catalog" href="catalog.html">Каталог
               <svg class="site-nav__icon" width="16" height="16" xmlns="http://www.w3.org/2000/svg">
                 <use href="images/icons/sprite.svg#arrow-down"></use>
@@ -150,45 +150,84 @@
             <div class="filter__wrapper">
               <label class="visually-hidden" for="sort">Выберите метод сортировки</label>
               <select class="filter-sort__list" name="sort" id="sort">
+                <option class="filter-sort__item" value="popularity">по цене</option>
                 <option class="filter-sort__item" value="popularity">по популярности</option>
               </select>
             </div>
           </fieldset>
           <fieldset class="filter-price">
-            <legend class="filter-price__caption">Цена: <span class="filter-price__price filter-price__price--min">100</span> &#8381; – <span class="filter-price__price filter-price__price--max">500</span> &#8381;</legend>
-            <div class="filter__wrapper">
+            <legend class="filter-price__caption">Цена:
               <label class="visually-hidden" for="min-price">Минимальная цена</label>
-              <input type="range" class="filter-price__input filter-price__input--min" id="min-price" name="min-price" min="0" max="1000" value="250">
+              <input class="filter-price__input filter-price__input--min" type="number" id="min-price" name="min-price" value="100"> &#8381; –
               <label class="visually-hidden" for="max-price">Максимальная цена</label>
-              <input type="range" class="filter-price__input filter-price__input--max" id="max-price" name="max-price" min="0" max="1000" value="750">
+              <input class="filter-price__input filter-price__input--max" type="number" id="max-price" name="max-price" value="500"> &#8381;
+            </legend>
+            <div class="filter__wrapper">
+              <div class="filter-price__range">
+                <div class="range-bar" style="left: 25%; width: 50%">
+                  <button class="range-toggle toggle-min">
+                    <span class="visually-hidden">Изменить минимальную цену.</span>
+                  </button>
+                  <button class="range-toggle toggle-max">
+                    <span class="visually-hidden">Изменить максимальную цену.</span>
+                  </button>
+                </div>
+              </div>
             </div>
           </fieldset>
           <fieldset class="filter-fat">
             <legend class="filter-fat__caption">Жирность:</legend>
             <div class="filter__wrapper">
-              <input type="radio" id="fat-0" name="fat" class="filter-fat__radio" value="0">
-              <label class="filter-fat__label" for="fat-0">0%</label>
-              <input type="radio" id="fat-10" name="fat" class="filter-fat__radio" value="10" checked>
-              <label class="filter-fat__label" for="fat-10">до 10%</label>
-              <input type="radio" id="fat-30" name="fat" class="filter-fat__radio" value="30">
-              <label class="filter-fat__label" for="fat-30">до 30%</label>
-              <input type="radio" id="fat-over-30" name="fat" class="filter-fat__radio" value="over 30">
-              <label class="filter-fat__label" for="fat-over-30">выше 30%</label>
+              <label class="filter-fat__control" for="fat-0">
+                <input class="visually-hidden filter-fat__radio" type="radio" id="fat-0" name="fat" value="0" tabindex="-1" checked>
+                <span class="filter-fat__mark" tabindex="0"></span>
+                <span class="filter-fat__label">0%</span>
+              </label>
+              <label class="filter-fat__control" for="fat-10">
+                <input class="visually-hidden filter-fat__radio" type="radio" id="fat-10" name="fat" value="10" tabindex="-1">
+                <span class="filter-fat__mark" tabindex="0"></span>
+                <span class="filter-fat__label">до 10%</span>
+              </label>
+              <label class="filter-fat__control" for="fat-30">
+                <input class="visually-hidden filter-fat__radio" type="radio" id="fat-30" name="fat" value="30" tabindex="-1">
+                <span class="filter-fat__mark" tabindex="0"></span>
+                <span class="filter-fat__label">до 30%</span>
+              </label>
+              <label class="filter-fat__control" for="fat-over-30">
+                <input class="visually-hidden filter-fat__radio" type="radio" id="fat-over-30" name="fat" value="over 30" tabindex="-1">
+                <span class="filter-fat__mark" tabindex="0"></span>
+                <span class="filter-fat__label">свыше 30%</span>
+              </label>
             </div>
           </fieldset>
           <fieldset class="filter-ext">
             <legend class="filter-ext__caption">Наполнители:</legend>
             <div class="filter__wrapper">
-              <input type="checkbox" id="ext-chocolate" name="ext-chocolate" class="filter-ext__checkbox" checked>
-              <label class="filter-ext__label" for="ext-chocolate">шоколадные</label>
-              <input type="checkbox" id="ext-sugar" name="ext-sugar" class="filter-ext__checkbox" checked>
-              <label class="filter-ext__label" for="ext-sugar">сахарные посыпки</label>
-              <input type="checkbox" id="ext-fruit" name="ext-fruit" class="filter-ext__checkbox">
-              <label class="filter-ext__label" for="ext-fruit">фрукты</label>
-              <input type="checkbox" id="ext-syrups" name="ext-syrups" class="filter-ext__checkbox">
-              <label class="filter-ext__label" for="ext-syrups">сиропы</label>
-              <input type="checkbox" id="ext-jams" name="ext-jams" class="filter-ext__checkbox">
-              <label class="filter-ext__label" for="ext-jams">джемы</label>
+              <label class="filter-ext__label" for="ext-chocolate">
+                <input class="visually-hidden filter-ext__checkbox" type="checkbox" id="ext-chocolate" name="ext-chocolate" tabindex="-1" checked>
+                <span class="filter-ext__mark" tabindex="0"></span>
+                <span class="filter-ext__label">шоколадные</span>
+              </label>
+              <label class="filter-ext__label" for="ext-sugar">
+                <input class="visually-hidden filter-ext__checkbox" type="checkbox" id="ext-sugar" name="ext-sugar" tabindex="-1" checked>
+                <span class="filter-ext__mark" tabindex="0"></span>
+                <span class="filter-ext__label">сахарные посыпки</span>
+              </label>
+              <label class="filter-ext__label" for="ext-fruit">
+                <input class="visually-hidden filter-ext__checkbox" type="checkbox" id="ext-fruit" name="ext-fruit" tabindex="-1">
+                <span class="filter-ext__mark" tabindex="0"></span>
+                <span class="filter-ext__label">фрукты</span>
+              </label>
+              <label class="filter-ext__label" for="ext-syrups">
+                <input class="visually-hidden filter-ext__checkbox" type="checkbox" id="ext-syrups" name="ext-syrups" tabindex="-1">
+                <span class="filter-ext__mark" tabindex="0"></span>
+                <span class="filter-ext__label">сиропы</span>
+              </label>
+              <label class="filter-ext__label" for="ext-jams">
+                <input class="visually-hidden filter-ext__checkbox" type="checkbox" id="ext-jams" name="ext-jams" tabindex="-1">
+                <span class="filter-ext__mark" tabindex="0"></span>
+                <span class="filter-ext__label">джемы</span>
+              </label>
             </div>
           </fieldset>
           <button type="submit" class="button filter__button">Применить</button>
@@ -462,18 +501,20 @@
       </div>
     </footer>
   </div>
-  <div class="modal">
-    <button class="modal__button">Закрыть окно</button>
-    <form class="form" action="https://echo.htmlacademy.ru/" method="post">
-      <p class="form__title">Мы обязательно ответим вам!</p>
-      <label class="visually-hidden" for="feedback-name">Введите Имя и Фамилию</label>
-      <input class="form__input" type="text" id="feedback-name" name="feedback-name" placeholder="Имя и фамилия">
-      <label class="visually-hidden" for="feedback-email">Введите email</label>
-      <input class="form__input" type="email" id="feedback-email" name="feedback-email" placeholder="email@example.com">
-      <label class="visually-hidden" for="feedback-message">Напишите сообщение</label>
-      <textarea class="form__textarea" id="feedback-message" name="feedback-message" placeholder="В свободной форме"></textarea>
-      <button type="submit" class="form__button">Отправить</button>
-    </form>
+  <div class="modal modal--closed">
+    <div class="modal__wrapper">
+      <button class="modal__button"><span class="visually-hidden">Закрыть окно</span></button>
+      <form class="form modal-form" action="https://echo.htmlacademy.ru/" method="post">
+        <p class="form__title form__title--modal">Мы обязательно ответим вам!</p>
+        <label class="visually-hidden" for="feedback-name">Введите Имя и Фамилию</label>
+        <input class="form__input" type="text" id="feedback-name" name="feedback-name" placeholder="Имя и фамилия">
+        <label class="visually-hidden" for="feedback-email">Введите email</label>
+        <input class="form__input" type="email" id="feedback-email" name="feedback-email" placeholder="email@example.com">
+        <label class="visually-hidden" for="feedback-message">Напишите сообщение</label>
+        <textarea class="form__textarea" id="feedback-message" name="feedback-message" placeholder="В свободной форме"></textarea>
+        <button class="form__button button button--primary" type="submit">Отправить</button>
+      </form>
+    </div>
   </div>
 </body>
 </html>
