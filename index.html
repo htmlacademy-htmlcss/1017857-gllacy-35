@@ -14,13 +14,13 @@
           <img class="logo__img" src="images/content/logo.svg" width="137" height="56" alt="Логотип &laquo;GllacyShop&raquo;.">
         </a>
         <ul class="site-nav">
-          <li class="site-nav__item">
-            <a class="site-nav__link" href="#">Каталог
-              <svg width="16" height="16" xmlns="http://www.w3.org/2000/svg">
+          <li class="site-nav__item site-nav__item--catalog">
+            <a class="site-nav__link site-nav__link--catalog" href="catalog.html">Каталог
+              <svg class="site-nav__icon" width="16" height="16" xmlns="http://www.w3.org/2000/svg">
                 <use href="images/icons/sprite.svg#arrow-down"></use>
               </svg>
             </a>
-            <ul class="catalog-nav-list" hidden>
+            <ul class="catalog-nav-list">
               <li class="catalog-nav-list__item">
                 <a class="catalog-nav-list__link catalog-nav-list__link--current">Новинки</a>
               </li>
@@ -42,89 +42,84 @@
             <a class="site-nav__link" href="index.html#delivery">Доставка и оплата</a>
           </li>
           <li class="site-nav__item">
-            <a class="site-nav__link" href="index.html#about">О компании</a>
+            <a class="site-nav__link" href="">О компании</a>
           </li>
         </ul>
         <ul class="user-nav">
-          <li class="user-nav__item">
+          <li class="user-nav__item ">
             <a class="user-nav__link user-nav__link--phone" href="tel:+78005558628">+7 800 555-86-28</a>
           </li>
           <li class="user-nav__item">
+            <button class="user-nav__link user-nav__link--search" type="button" >
+              <svg class="user-nav__icon user-nav__icon--search" width="14" height="14" xmlns="http://www.w3.org/2000/svg">
+                <use href="images/icons/sprite.svg#search"></use>
+              </svg>
+              <span class="visually-hidden">Найти</span>
+            </button>
             <form class="form form--user-nav" action="https://echo.htmlacademy.ru/" method="get">
               <label class="visually-hidden" for="search">Поиск по сайту.</label>
-              <input class="form__input" type="search" id="search" name="search" placeholder="Поиск по сайту" hidden>
-              <button class="form__button--search" type="submit">
-                <svg width="14" height="14" xmlns="http://www.w3.org/2000/svg">
-                  <use href="images/icons/sprite.svg#search"></use>
-                </svg>
-                <span class="visually-hidden">Найти</span>
-              </button>
+              <input class="form__input" type="search" id="search" name="search" placeholder="Поиск по сайту" >
             </form>
           </li>
           <li class="user-nav__item">
-            <a href="#" class="user-nav__link">
-              <svg width="14" height="15" xmlns="http://www.w3.org/2000/svg">
+            <a href="#" class="user-nav__link user-nav__link--enter">
+              <svg class="user-nav__icon user-nav__icon--enter" width="14" height="15" xmlns="http://www.w3.org/2000/svg">
                 <use href="images/icons/sprite.svg#enter"></use>
               </svg>
               Вход
             </a>
-            <div class="personal-area-popup" hidden>
+            <div class="personal-area-popup">
               <h3 class="personal-area-popup__header">Личный кабинет</h3>
-              <form class="form" action="https://echo.htmlacademy.ru/" method="post">
+              <form class="personal-area-popup__form form" action="https://echo.htmlacademy.ru/" method="post">
                 <label class="visually-hidden" for="personal-area-email">Введите email</label>
-                <input class="form__input" type="email" id="personal-area-email" name="personal-area-email" placeholder="email@example.com">
+                <input class="personal-area-popup__input form__input" type="email" id="personal-area-email" name="personal-area-email" placeholder="email@example.com">
                 <label class="visually-hidden" for="personal-area-password">Введите пароль</label>
-                <input class="form__input" type="password" id="personal-area-password" name="personal-area-password">
-                <button class="button button--primary" type="submit">Войти</button>
-                <a class="form__link" href="#">Забыли пароль?</a>
-                <a class="form__link" href="#">Регистрация</a>
+                <input class="personal-area-popup__input personal-area-popup__input--password form__input" type="password" id="personal-area-password" name="personal-area-password">
+                <button class="personal-area-popup__button button button--primary" type="submit">Войти</button>
+                <a class="personal-area-popup__link personal-area-popup__link--recovery form__link" href="#">Забыли пароль?</a>
+                <a class="personal-area-popup__link personal-area-popup__link--registration form__link" href="#">Регистрация</a>
               </form>
             </div>
           </li>
           <li class="user-nav__item cart">
             <a class="user-nav__link cart__link" href="#">
               <span class="visually-hidden">Корзина</span>
-              <svg width="15" height="14" xmlns="http://www.w3.org/2000/svg">
+              <svg class="user-nav__icon user-nav__icon--cart" width="15" height="14" xmlns="http://www.w3.org/2000/svg">
                 <use href="images/icons/sprite.svg#cart"></use>
               </svg>
               <span class="cart__count">2 товара</span>
             </a>
-            <div class="cart-popup cart-popup--with-products" hidden>
+            <div class="cart-popup cart-popup--with-products">
               <h3 class="cart-popup__header">Корзина</h3>
-              <div class="cart-popup__row">
-                <a href="#">
-                  <img class="cart-popup__img" src="images/content/catalog/raspberry-small.jpg" width="46" height="46" alt="Малиновое мороженое.">
+              <a class="cart-popup__link cart-popup__link--picture" href="#">
+                <img class="cart-popup__img" src="images/content/catalog/raspberry-small.jpg" width="46" height="46" alt="Малиновое мороженое.">
+              </a>
+              <div class="cart-popup__product">
+                <a class="cart-popup__link" href="#">
+                  <p class="cart-popup__title">Малинка</p>
                 </a>
-                <div class="cart-popup__product">
-                  <a class="cart-popup__link" href="#">
-                    <p class="cart-popup__title">Малинка</p>
-                  </a>
-                  <p class="cart-popup__weight">1 кг х 310 &#8381;</p>
-                </div>
-                <p class="cart-popup__price">310 &#8381;</p>
-                <a class="cart-popup__delete" href="#">
-                  <span class="visually-hidden">Удалить из корзины.</span>
-                </a>
+                <p class="cart-popup__weight">1 кг х 310 &#8381;</p>
               </div>
-              <div class="cart-popup__row">
-                <a href="#">
-                  <img class="cart-popup__img" src="images/content/catalog/bubble-gum-small.jpg" width="46" height="46" alt="Мороженое бабл-гам." >
+              <p class="cart-popup__price">310 &#8381;</p>
+              <a class="cart-popup__delete" href="#">
+                <span class="visually-hidden">Удалить из корзины.</span>
+              </a>
+              <a class="cart-popup__link cart-popup__link--picture" href="#">
+                <img class="cart-popup__img" src="images/content/catalog/bubble-gum-small.jpg" width="46" height="46" alt="Мороженое бабл-гам." >
+              </a>
+              <div class="cart-popup__product">
+                <a class="cart-popup__link" href="#">
+                  <p class="cart-popup__title">Бабл-гам</p>
                 </a>
-                <div class="cart-popup__product">
-                  <a class="cart-popup__link" href="#">
-                    <p class="cart-popup__title">Бабл-гам</p>
-                  </a>
-                  <p class="cart-popup__weight">1,5 кг х 320 &#8381;</p>
-                </div>
-                <p class="cart-popup__price">480 &#8381;</p>
-                <a class="cart-popup__delete" href="#">
-                  <span class="visually-hidden">Удалить из корзины.</span>
-                </a>
+                <p class="cart-popup__weight">1,5 кг х 320 &#8381;</p>
               </div>
-              <div class="cart-popup__row cart-popup__row--total">
-                <a class="button button--primary" href="#">Оформить заказ</a>
-                <p class="cart-popup__price">Итого: 790 &#8381;</p>
-              </div>
+              <p class="cart-popup__price">480 &#8381;</p>
+              <a class="cart-popup__delete" href="#">
+                <span class="visually-hidden">Удалить из корзины.</span>
+              </a>
+              <hr class="cart-popup__separator">
+              <a class="cart-popup__button button button--primary" href="#">Оформить заказ</a>
+              <p class="cart-popup__price cart-popup__price--total">Итого: 790 &#8381;</p>
             </div>
             <div class="cart-popup cart-popup--empty" hidden>
               <h3 class="cart-popup__header cart-popup__header--empty">Ваша корзина пока пуста</h3>
@@ -224,17 +219,15 @@
       <section class="bonus">
         <h2 class="bonus__title title">Заказывайте мороженое<br>и получайте подарки!</h2>
         <div class="bonus__wrapper">
-          <article class="bonus-card">
+          <article class="bonus-card bonus-card--left">
             <h3 class="bonus-card__header">Малинка даром!</h3>
             <p class="bonus-card__description">При покупке 2 кг любого фруктового мороженого добавим в ваш заказ банку малинового варенья бесплатно.</p>
             <a class="bonus-card__button button button--secondary" href="#">Хочу подарок</a>
-            <img class="bonus-card__img" src="images/content/bonus-raspberry.png" width="219" height="268" alt="Вафельный рожок с малиной." >
           </article>
-          <article class="bonus-card">
+          <article class="bonus-card bonus-card--right">
             <h3 class="bonus-card__header">Маршмеллоу даром!</h3>
             <p class="bonus-card__description">При покупке 2 кг пломбира добавим в ваш заказ упаковку нежных зефирок совершенно бесплатно.</p>
             <a class="bonus-card__button button button--secondary" href="#">Хочу подарок</a>
-            <img class="bonus-card__img" src="images/content/bonus-marshmallow.png" width="219" height="268" alt="Вафельный рожок с маршмеллоу." >
           </article>
         </div>
       </section>
@@ -245,7 +238,7 @@
             <a class="product-card__link product-card__picture" href="#">
               <img class="product-card__img" src="images/content/catalog/raspberry.jpg" width="168" height="168" alt="Малиновое мороженое." >
             </a>
-            <a class="product-card__link" href="#">
+            <a class="product-card__link product-card__title" href="#">
               <h3 class="product-card__header">Малинка</h3>
             </a>
             <p class="product-card__description">Сливочное мороженое с малиновым джемом</p>
@@ -261,61 +254,49 @@
             <a class="product-card__link product-card__picture" href="#">
               <img class="product-card__img" src="images/content/catalog/pistachio.jpg" width="168" height="168" alt="Фисташковое мороженое.">
             </a>
-            <div class="product-card__wrapper">
-              <a class="product-card__link" href="#">
-                <h3 class="product-card__header">Фисташка</h3>
-              </a>
-              <p class="product-card__description">Фисташковый пломбир с кусочками шоколада</p>
-              <div class="product-card__bottom">
-                <b class="product-card__price">340 &#8381;/кг</b>
-                <a class="product-card__button" href="#">
-                  <svg class="product-card__icon" width="15" height="14" xmlns="http://www.w3.org/2000/svg">
-                    <use href="images/icons/sprite.svg#cart"></use>
-                  </svg>
-                  <span class="visually-hidden">Добавить в корзину</span>
-                </a>
-              </div>
-            </div>
+            <a class="product-card__link product-card__title" href="#">
+              <h3 class="product-card__header">Фисташка</h3>
+            </a>
+            <p class="product-card__description">Фисташковый пломбир с кусочками шоколада</p>
+            <b class="product-card__price">340 &#8381;/кг</b>
+            <a class="product-card__button" href="#">
+              <svg class="product-card__icon" width="15" height="14" xmlns="http://www.w3.org/2000/svg">
+                <use href="images/icons/sprite.svg#cart"></use>
+              </svg>
+              <span class="visually-hidden">Добавить в корзину</span>
+            </a>
           </li>
           <li class="product-card product-card--index">
             <a class="product-card__link product-card__picture" href="#">
               <img class="product-card__img" src="images/content/catalog/blueberry.jpg" width="168" height="168" alt="Черничное мороженое.">
             </a>
-            <div class="product-card__wrapper">
-              <a class="product-card__link" href="#">
-                <h3 class="product-card__header">Черника</h3>
-              </a>
-              <p class="product-card__description">Крем-брюле с черничным джемом</p>
-              <div class="product-card__bottom">
-                <b class="product-card__price">330 &#8381;/кг</b>
-                <a class="product-card__button" href="#">
-                  <svg class="product-card__icon" width="15" height="14" xmlns="http://www.w3.org/2000/svg">
-                    <use href="images/icons/sprite.svg#cart"></use>
-                  </svg>
-                  <span class="visually-hidden">Добавить в корзину</span>
-                </a>
-              </div>
-            </div>
+            <a class="product-card__link product-card__title" href="#">
+              <h3 class="product-card__header">Черника</h3>
+            </a>
+            <p class="product-card__description">Крем-брюле с черничным джемом</p>
+            <b class="product-card__price">330 &#8381;/кг</b>
+            <a class="product-card__button" href="#">
+              <svg class="product-card__icon" width="15" height="14" xmlns="http://www.w3.org/2000/svg">
+                <use href="images/icons/sprite.svg#cart"></use>
+              </svg>
+              <span class="visually-hidden">Добавить в корзину</span>
+            </a>
           </li>
           <li class="product-card product-card--index">
             <a class="product-card__link product-card__picture" href="#">
               <img class="product-card__img" src="images/content/catalog/bubble-gum.jpg" width="168" height="168" alt="Ванильное мороженое." >
             </a>
-            <div class="product-card__wrapper">
-              <a class="product-card__link" href="#">
-                <h3 class="product-card__header">Бабл-гам</h3>
-              </a>
-              <p class="product-card__description">Ванильный пломбир со сладкой посыпкой</p>
-              <div class="product-card__bottom">
-                <b class="product-card__price">320 &#8381;/кг</b>
-                <a class="product-card__button" href="#">
-                  <svg class="product-card__icon" width="15" height="14" xmlns="http://www.w3.org/2000/svg">
-                    <use href="images/icons/sprite.svg#cart"></use>
-                  </svg>
-                  <span class="visually-hidden">Добавить в корзину</span>
-                </a>
-              </div>
-            </div>
+            <a class="product-card__link" href="#">
+              <h3 class="product-card__header product-card__title">Бабл-гам</h3>
+            </a>
+            <p class="product-card__description">Ванильный пломбир со сладкой посыпкой</p>
+            <b class="product-card__price">320 &#8381;/кг</b>
+            <a class="product-card__button" href="#">
+              <svg class="product-card__icon" width="15" height="14" xmlns="http://www.w3.org/2000/svg">
+                <use href="images/icons/sprite.svg#cart"></use>
+              </svg>
+              <span class="visually-hidden">Добавить в корзину</span>
+            </a>
           </li>
         </ul>
       </section>
@@ -358,8 +339,17 @@
         <form class="delivery__form form" action="https://echo.htmlacademy.ru/" method="post" >
           <p class="delivery__caption form__description">Укажите адрес и дату доставки, и мы свяжемся с вами, чтобы подтвердить заказ.</p>
           <div class="delivery__date form__item">
-            <p class="form__tooltip" hidden>Введите дату</p>
-            <label class="form__label form__label--date" for="delivery-date">Дата </label>
+            <span class="form__label">
+              <label class="form__label form__label--date" for="delivery-date">Дата </label>
+              <span class="tooltip tooltip--date">
+                <button class="tooltip-toggle" type="button" aria-labelledby="tooltip-label-date">
+                   <svg  class="tooltip-icon" width="14" height="14" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                     <path fill-rule="evenodd" clip-rule="evenodd" d="M7 2.13a4.88 4.88 0 1 0 0 9.75 4.88 4.88 0 0 0 0-9.75ZM.8 7a6.2 6.2 0 1 1 12.4 0A6.2 6.2 0 0 1 .8 7ZM7 6.33c.37 0 .67.3.67.67v2.22a.67.67 0 0 1-1.34 0V7c0-.37.3-.67.67-.67Zm0-2.21a.67.67 0 0 0 0 1.33.67.67 0 0 0 0-1.33Z"/>
+                   </svg>
+                </button>
+                <span class="tooltip-text" role="tooltip" id="tooltip-label-date">Введите дату</span>
+              </span>
+            </span>
             <input class="form__input" type="text" id="delivery-date" name="delivery-date" placeholder="01.04.2020"  >
           </div>
           <div class="delivery__phone form__item">
@@ -367,8 +357,17 @@
             <input class="form__input" type="tel" id="delivery-phone" name="delivery-phone" placeholder="+7 800 999-00-00">
           </div>
           <div class="delivery__address form__item">
-            <p class="form__tooltip" hidden>Введите название улицы, дома и квартиры</p>
-            <label class="form__label form__label--address" for="delivery-address">Адрес </label>
+            <span class="form__label">
+              <label class="form__label form__label--address" for="delivery-address">Адрес </label>
+              <span class="tooltip tooltip--address">
+                <button class="tooltip-toggle" type="button" aria-labelledby="tooltip-label-address">
+                   <svg  class="tooltip-icon" width="14" height="14" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                     <path fill-rule="evenodd" clip-rule="evenodd" d="M7 2.13a4.88 4.88 0 1 0 0 9.75 4.88 4.88 0 0 0 0-9.75ZM.8 7a6.2 6.2 0 1 1 12.4 0A6.2 6.2 0 0 1 .8 7ZM7 6.33c.37 0 .67.3.67.67v2.22a.67.67 0 0 1-1.34 0V7c0-.37.3-.67.67-.67Zm0-2.21a.67.67 0 0 0 0 1.33.67.67 0 0 0 0-1.33Z"/>
+                   </svg>
+                </button>
+                <span class="tooltip-text" role="tooltip" id="tooltip-label-address">Введите название улицы, дома и квартиры</span>
+              </span>
+            </span>
             <input class="form__input" type="text" id="delivery-address" name="delivery-address" placeholder="ул. Большая Конюшенная, 19/8">
           </div>
           <button class="delivery__button button button--primary" type="submit">Отправить</button>
@@ -435,18 +434,20 @@
       </div>
     </footer>
   </div>
-  <div class="modal">
-    <button class="modal__button">Закрыть окно</button>
-    <form class="form" action="https://echo.htmlacademy.ru/" method="post">
-      <p class="form__title">Мы обязательно ответим вам!</p>
-      <label class="visually-hidden" for="feedback-name">Введите Имя и Фамилию</label>
-      <input class="form__input" type="text" id="feedback-name" name="feedback-name" placeholder="Имя и фамилия">
-      <label class="visually-hidden" for="feedback-email">Введите email</label>
-      <input class="form__input" type="email" id="feedback-email" name="feedback-email" placeholder="email@example.com">
-      <label class="visually-hidden" for="feedback-message">Напишите сообщение</label>
-      <textarea class="form__textarea" id="feedback-message" name="feedback-message" placeholder="В свободной форме"></textarea>
-      <button class="form__button" type="submit">Отправить</button>
-    </form>
+  <div class="modal modal--closed">
+    <div class="modal__wrapper">
+      <button class="modal__button"><span class="visually-hidden">Закрыть окно</span></button>
+      <form class="form modal-form" action="https://echo.htmlacademy.ru/" method="post">
+        <p class="form__title form__title--modal">Мы обязательно ответим вам!</p>
+        <label class="visually-hidden" for="feedback-name">Введите Имя и Фамилию</label>
+        <input class="form__input" type="text" id="feedback-name" name="feedback-name" placeholder="Имя и фамилия">
+        <label class="visually-hidden" for="feedback-email">Введите email</label>
+        <input class="form__input" type="email" id="feedback-email" name="feedback-email" placeholder="email@example.com">
+        <label class="visually-hidden" for="feedback-message">Напишите сообщение</label>
+        <textarea class="form__textarea" id="feedback-message" name="feedback-message" placeholder="В свободной форме"></textarea>
+        <button class="form__button button button--primary" type="submit">Отправить</button>
+      </form>
+    </div>
   </div>
 </body>
 </html>
