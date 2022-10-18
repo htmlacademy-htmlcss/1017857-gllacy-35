@@ -83,13 +83,23 @@
   margin: 0;
 }
 
+.page--second {
+  background-color: #69A9FF;
+}
+
+.page--therd {
+  background-color: #FCC850;;
+}
+
 /* header */
 
 .page__container {
-  width: 1170px;
+  width: 1210px;
   margin: 0 auto;
   display: flex;
   flex-direction: column;
+  padding-left: 20px;
+  padding-right: 20px;
 }
 
 .header {
