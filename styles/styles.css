@@ -1522,7 +1522,8 @@
   border-radius: 50%;
 }
 
-.filter-fat__control:hover .filter-fat__mark {
+.filter-fat__control:hover .filter-fat__mark,
+.filter-fat__radio:focus + .filter-fat__mark{
   border: 2px solid #FCFCFC;
 }
 
@@ -1541,15 +1542,14 @@
   left: 3px;
 }
 
-.filter-fat__control:hover .filter-fat__radio:checked + .filter-fat__mark:before {
+.filter-fat__control:hover .filter-fat__radio:checked + .filter-fat__mark:before,
+.filter-fat__radio:focus  + .filter-fat__mark:before{
   background-color: #FCFCFC;
 }
 
 .filter-fat {
   width: 383px;
 }
-
-
 
 .filter-ext__label {
   position: relative;
@@ -1568,7 +1568,8 @@
   background-image: url("../images/icons/checkbox-unchecked-default.svg");
 }
 
-.filter-ext__label:hover  .filter-ext__mark{
+.filter-ext__label:hover  .filter-ext__mark,
+.filter-ext__checkbox:focus + .filter-ext__mark{
   background-image: url("../images/icons/checkbox-unchecked-hover.svg");
 }
 
@@ -1580,15 +1581,16 @@
   background-image: url("../images/icons/checkbox-checked-default.svg");
 }
 
-.filter-ext__checkbox:checked:hover + .filter-ext__mark {
+.filter-ext__checkbox:checked:hover + .filter-ext__mark,
+.filter-ext__checkbox:checked:focus + .filter-ext__mark{
   background-image: url("../images/icons/checkbox-checked-hover.svg");
 }
+
 
 .filter-ext {
   width: 630px;
   margin-right: 16px;
   padding-top: 8px;
-
 }
 
 .filter-sort__caption,
