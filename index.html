@@ -14,7 +14,7 @@
           <img class="logo__img" src="images/content/logo.svg" width="137" height="56" alt="Логотип &laquo;GllacyShop&raquo;.">
         </a>
         <ul class="site-nav">
-          <li class="site-nav__item site-nav__item--catalog">
+          <li class="site-nav__item">
             <a class="site-nav__link site-nav__link--catalog" href="catalog.html">Каталог</a>
             <ul class="catalog-nav-list">
               <li class="catalog-nav-list__item">
@@ -85,40 +85,8 @@
               </svg>
               <span class="cart__count">2 товара</span>
             </a>
-            <div class="cart-popup cart-popup--with-products">
-              <h3 class="cart-popup__header">Корзина</h3>
-              <a class="cart-popup__link cart-popup__link--picture" href="#">
-                <img class="cart-popup__img" src="images/content/catalog/raspberry-small.jpg" width="46" height="46" alt="Малиновое мороженое.">
-              </a>
-              <div class="cart-popup__product">
-                <a class="cart-popup__link" href="#">
-                  <p class="cart-popup__title">Малинка</p>
-                </a>
-                <p class="cart-popup__weight">1 кг х 310 &#8381;</p>
-              </div>
-              <p class="cart-popup__price">310 &#8381;</p>
-              <a class="cart-popup__delete" href="#">
-                <span class="visually-hidden">Удалить из корзины.</span>
-              </a>
-              <a class="cart-popup__link cart-popup__link--picture" href="#">
-                <img class="cart-popup__img" src="images/content/catalog/bubble-gum-small.jpg" width="46" height="46" alt="Мороженое бабл-гам." >
-              </a>
-              <div class="cart-popup__product">
-                <a class="cart-popup__link" href="#">
-                  <p class="cart-popup__title">Бабл-гам</p>
-                </a>
-                <p class="cart-popup__weight">1,5 кг х 320 &#8381;</p>
-              </div>
-              <p class="cart-popup__price">480 &#8381;</p>
-              <a class="cart-popup__delete" href="#">
-                <span class="visually-hidden">Удалить из корзины.</span>
-              </a>
-              <hr class="cart-popup__separator">
-              <a class="cart-popup__button button button--primary" href="#">Оформить заказ</a>
-              <p class="cart-popup__price cart-popup__price--total">Итого: 790 &#8381;</p>
-            </div>
-            <div class="cart-popup cart-popup--empty" hidden>
-              <h3 class="cart-popup__header cart-popup__header--empty">Ваша корзина пока пуста</h3>
+            <div class="cart-popup cart-popup--empty">
+              <h3 class="cart-popup__header">Ваша корзина пока пуста</h3>
             </div>
           </li>
         </ul>
@@ -152,7 +120,7 @@
                 <img class="slider__img" src="images/content/icecream-srawberry-big.png" width="306" height="507" alt="Пломбир в вафельном рожке с клубничным джемом.">
               </li>
               <li class="slider-picture__item">
-                <img class="slider__img slider__img--current" src="images/content/icecream-banana-big.png" width="306" height="507" alt="Сливочное мороженое в вафельном рожке с бананового цвета.">
+                <img class="slider__img" src="images/content/icecream-banana-big.png" width="306" height="507" alt="Сливочное мороженое в вафельном рожке с бананового цвета.">
               </li>
               <li class="slider-picture__item">
                 <img class="slider__img" src="images/content/icecream-marshmallow-big.png" width="306" height="507" alt="Карамельный пломбир в вафельном рожке.">
@@ -186,7 +154,7 @@
           </ol>
           <ul class="social-list">
             <li class="social-list__item">
-              <a class="social-list__link social-list__link--slider" href="https://t.me/htmlacademy" target="_blank">
+              <a class="social-list__link" href="https://t.me/htmlacademy" target="_blank">
                 <svg width="24" height="24" xmlns="http://www.w3.org/2000/svg">
                   <use href="images/icons/sprite.svg#telegram"></use>
                 </svg>
@@ -194,7 +162,7 @@
               </a>
             </li>
             <li class="social-list__item">
-              <a class="social-list__link social-list__link--slider" href="https://vk.com/htmlacademy" target="_blank">
+              <a class="social-list__link" href="https://vk.com/htmlacademy" target="_blank">
                 <svg width="24" height="24" fill="" xmlns="http://www.w3.org/2000/svg">
                   <use href="images/icons/sprite.svg#vk"></use>
                 </svg>
@@ -202,7 +170,7 @@
               </a>
             </li>
             <li class="social-list__item">
-              <a class="social-list__link social-list__link--slider" href="https://www.youtube.com/user/htmlacademyru" target="_blank">
+              <a class="social-list__link" href="https://www.youtube.com/user/htmlacademyru" target="_blank">
                 <svg width="24" height="24" xmlns="http://www.w3.org/2000/svg">
                   <use href="images/icons/sprite.svg#youtube"></use>
                 </svg>
@@ -262,7 +230,7 @@
               <span class="visually-hidden">Добавить в корзину</span>
             </a>
           </li>
-          <li class="product-card product-card--index">
+          <li class="product-card">
             <a class="product-card__link product-card__picture" href="#">
               <img class="product-card__img" src="images/content/catalog/blueberry.jpg" width="168" height="168" alt="Черничное мороженое.">
             </a>
@@ -278,7 +246,7 @@
               <span class="visually-hidden">Добавить в корзину</span>
             </a>
           </li>
-          <li class="product-card product-card--index">
+          <li class="product-card">
             <a class="product-card__link product-card__picture" href="#">
               <img class="product-card__img" src="images/content/catalog/bubble-gum.jpg" width="168" height="168" alt="Ванильное мороженое." >
             </a>
@@ -334,7 +302,7 @@
         </div>
         <form class="delivery__form form" action="https://echo.htmlacademy.ru/" method="post" >
           <p class="delivery__caption form__description">Укажите адрес и дату доставки, и мы свяжемся с вами, чтобы подтвердить заказ.</p>
-          <div class="delivery__date form__item">
+          <div class="delivery__date">
             <span class="form__label">
               <label class=" form__label--date" for="delivery-date">Дата </label>
               <span class="tooltip tooltip--date">
@@ -348,11 +316,11 @@
             </span>
             <input class="form__input" type="text" id="delivery-date" name="delivery-date" placeholder="01.04.2020"  >
           </div>
-          <div class="delivery__phone form__item">
+          <div class="delivery__phone">
             <label class="form__label" for="delivery-phone">Телефон </label>
             <input class="form__input" type="tel" id="delivery-phone" name="delivery-phone" placeholder="+7 800 999-00-00">
           </div>
-          <div class="delivery__address form__item">
+          <div class="delivery__address">
             <span class="form__label">
               <label class=" form__label--address" for="delivery-address">Адрес </label>
               <span class="tooltip tooltip--address">
@@ -385,7 +353,7 @@
       <ul class="footer__social-list social-list">
         <li class="social-list__item">
           <a class="social-list__link" href="https://t.me/htmlacademy" target="_blank">
-            <svg class="social-list__icon" width="24" height="24" xmlns="http://www.w3.org/2000/svg">
+            <svg width="24" height="24" xmlns="http://www.w3.org/2000/svg">
               <use href="images/icons/sprite.svg#telegram"></use>
             </svg>
             <span class="visually-hidden">Телеграм.</span>
@@ -393,7 +361,7 @@
         </li>
         <li class="social-list__item">
           <a class="social-list__link" href="https://vk.com/htmlacademy" target="_blank">
-            <svg class="social-list__icon" width="24" height="24" fill="" xmlns="http://www.w3.org/2000/svg">
+            <svg width="24" height="24" fill="" xmlns="http://www.w3.org/2000/svg">
               <use href="images/icons/sprite.svg#vk"></use>
             </svg>
             <span class="visually-hidden">ВКонтакте.</span>
@@ -401,7 +369,7 @@
         </li>
         <li class="social-list__item">
           <a class="social-list__link" href="https://www.youtube.com/user/htmlacademyru" target="_blank">
-            <svg class="social-list__icon"  width="24" height="24" xmlns="http://www.w3.org/2000/svg">
+            <svg width="24" height="24" xmlns="http://www.w3.org/2000/svg">
               <use href="images/icons/sprite.svg#youtube"></use>
             </svg>
             <span class="visually-hidden">Youtube.</span>
