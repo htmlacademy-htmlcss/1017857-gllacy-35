@@ -22,7 +22,7 @@
               <li class="catalog-nav-list__item">
                 <a class="catalog-nav-list__link" href="index.html">Новинки</a>
               </li>
-              <li class="catalog-nav-list__item">
+              <li class="catalog-nav-list__item catalog-nav-list__item--current">
                 <a class="catalog-nav-list__link catalog-nav-list__link--current">Сливочное</a>
               </li>
               <li class="catalog-nav-list__item">
@@ -67,12 +67,12 @@
               Вход
             </a>
             <div class="personal-area-popup">
-              <h3 class="personal-area-popup__header">Личный кабинет</h3>
+              <p class="personal-area-popup__header">Личный кабинет</p>
               <form class="personal-area-popup__form form" action="https://echo.htmlacademy.ru/" method="post">
                 <label class="visually-hidden" for="personal-area-email">Введите email</label>
-                <input class="personal-area-popup__input form__input" type="email" id="personal-area-email" name="personal-area-email" placeholder="email@example.com">
+                <input class="personal-area-popup__input form__input" type="email" id="personal-area-email" name="personal-area-email" placeholder="email@example.com" required>
                 <label class="visually-hidden" for="personal-area-password">Введите пароль</label>
-                <input class="personal-area-popup__input personal-area-popup__input--password form__input" type="password" id="personal-area-password" name="personal-area-password">
+                <input class="personal-area-popup__input personal-area-popup__input--password form__input" type="password" id="personal-area-password" name="personal-area-password" required>
                 <button class="personal-area-popup__button button button--primary" type="submit">Войти</button>
                 <a class="personal-area-popup__link personal-area-popup__link--recovery form__link" href="#">Забыли пароль?</a>
                 <a class="personal-area-popup__link personal-area-popup__link--registration form__link" href="#">Регистрация</a>
@@ -88,7 +88,7 @@
               <span class="cart__count">2 товара</span>
             </a>
             <div class="cart-popup cart-popup--with-products">
-              <h3 class="cart-popup__header">Корзина</h3>
+              <p class="cart-popup__header">Корзина</p>
               <a class="cart-popup__link cart-popup__link--picture" href="#">
                 <img class="cart-popup__img" src="images/content/catalog/raspberry-small.jpg" width="46" height="46" alt="Малиновое мороженое.">
               </a>
@@ -501,11 +501,11 @@
       <form class="form modal-form" action="https://echo.htmlacademy.ru/" method="post">
         <p class="form__title form__title--modal">Мы обязательно ответим вам!</p>
         <label class="visually-hidden" for="feedback-name">Введите Имя и Фамилию</label>
-        <input class="form__input" type="text" id="feedback-name" name="feedback-name" placeholder="Имя и фамилия">
+        <input class="form__input" type="text" id="feedback-name" name="feedback-name" placeholder="Имя и фамилия" required>
         <label class="visually-hidden" for="feedback-email">Введите email</label>
-        <input class="form__input" type="email" id="feedback-email" name="feedback-email" placeholder="email@example.com">
+        <input class="form__input" type="email" id="feedback-email" name="feedback-email" placeholder="email@example.com" required>
         <label class="visually-hidden" for="feedback-message">Напишите сообщение</label>
-        <textarea class="form__textarea" id="feedback-message" name="feedback-message" placeholder="В свободной форме"></textarea>
+        <textarea class="form__textarea" id="feedback-message" name="feedback-message" placeholder="В свободной форме" required></textarea>
         <button class="form__button button button--primary" type="submit">Отправить</button>
       </form>
     </div>

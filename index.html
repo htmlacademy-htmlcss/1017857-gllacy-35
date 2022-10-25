@@ -19,7 +19,7 @@
           <li class="site-nav__item site-nav__item--catalog">
             <a class="site-nav__link site-nav__link--catalog" href="catalog.html">Каталог</a>
             <ul class="catalog-nav-list">
-              <li class="catalog-nav-list__item">
+              <li class="catalog-nav-list__item catalog-nav-list__item--current">
                 <a class="catalog-nav-list__link catalog-nav-list__link--current">Новинки</a>
               </li>
               <li class="catalog-nav-list__item">
@@ -67,12 +67,12 @@
               Вход
             </a>
             <div class="personal-area-popup">
-              <h3 class="personal-area-popup__header">Личный кабинет</h3>
+              <p class="personal-area-popup__header">Личный кабинет</p>
               <form class="personal-area-popup__form form" action="https://echo.htmlacademy.ru/" method="post">
                 <label class="visually-hidden" for="personal-area-email">Введите email</label>
-                <input class="personal-area-popup__input form__input" type="email" id="personal-area-email" name="personal-area-email" placeholder="email@example.com">
+                <input class="personal-area-popup__input form__input" type="email" id="personal-area-email" name="personal-area-email" placeholder="email@example.com" required>
                 <label class="visually-hidden" for="personal-area-password">Введите пароль</label>
-                <input class="personal-area-popup__input personal-area-popup__input--password form__input" type="password" id="personal-area-password" name="personal-area-password">
+                <input class="personal-area-popup__input personal-area-popup__input--password form__input" type="password" id="personal-area-password" name="personal-area-password" required>
                 <button class="personal-area-popup__button button button--primary" type="submit">Войти</button>
                 <a class="personal-area-popup__link personal-area-popup__link--recovery form__link" href="#">Забыли пароль?</a>
                 <a class="personal-area-popup__link personal-area-popup__link--registration form__link" href="#">Регистрация</a>
@@ -88,7 +88,7 @@
               <span class="cart__count">2 товара</span>
             </a>
             <div class="cart-popup cart-popup--empty">
-              <h3 class="cart-popup__header">Ваша корзина пока пуста</h3>
+              <p class="cart-popup__header cart-popup__header--empty">Ваша корзина пока пуста</p>
             </div>
           </li>
         </ul>
@@ -128,30 +128,30 @@
                 <img class="slider__img" src="images/content/icecream-marshmallow-big.png" width="306" height="507" alt="Карамельный пломбир в вафельном рожке.">
               </li>
             </ul>
-            <a href="#" class="slider-picture__button slider-picture__button--back">
+            <button class="slider-picture__button slider-picture__button--back" type="button">
               <svg width="16" height="16" xmlns="http://www.w3.org/2000/svg">
                 <use href="images/icons/sprite.svg#arrow-left"></use>
               </svg>
               <span class="visually-hidden">Назад</span>
-            </a>
-            <a href="#" class="slider-picture__button  slider-picture__button--forward">
+            </button>
+            <button class="slider-picture__button  slider-picture__button--forward" type="button">
               <svg  width="16" height="16" xmlns="http://www.w3.org/2000/svg">
                 <use href="images/icons/sprite.svg#arrow-right"></use>
               </svg>
               <span class="visually-hidden">Вперед</span>
-            </a>
+            </button>
           </div>
         </div>
         <div class="promo__bottom">
           <ol class="slider-dots" aria-label="Навигация по слайдеру.">
             <li class="slider-dots__item">
-              <a class="slider-dots__link slider-dots__link--current" href="#"><span class="visually-hidden">Первый слайд</span></a>
+              <button class="slider-dots__button slider-dots__button--current" type="button"><span class="visually-hidden">Первый слайд</span></button>
             </li>
             <li class="slider-dots__item">
-              <a class="slider-dots__link" href="#"><span class="visually-hidden">Второй слайд</span></a>
+              <button class="slider-dots__button" type="button"><span class="visually-hidden">Второй слайд</span></button>
             </li>
             <li class="slider-dots__item">
-              <a class="slider-dots__link" href="#"><span class="visually-hidden">Третий слайд</span></a>
+              <button class="slider-dots__button" type="button"><span class="visually-hidden">Третий слайд</span></button>
             </li>
           </ol>
           <ul class="social-list">
@@ -271,7 +271,7 @@
           <h2 class="about__title title">Магазин Глейси – это онлайн и офлайн-магазин по продаже мороженого собственного производства на развес</h2>
           <ul class="about__list">
             <li class="about__item about__item--icecream">Всё наше мороженое изготавливается на&nbsp;собственном производстве с&nbsp;использованием современного оборудования и&nbsp;проверенных временем технологий.</li>
-            <li class="about__item about__item--cow">Закупка ингредиентов производится только у&nbsp;проверенных фермерских хозяйств, с&nbsp;которыми нас связывает долговременное сотрудничество.</li>
+            <li class="about__item about__item--cow">Закупка ингредиентов производится только у&nbsp;проверенных фермерских хозяйств, с&nbsp;которыми нас&nbsp;связывает долговременное сотрудничество.</li>
             <li class="about__item about__item--leaf">Для приготовления мороженого используются сливки и&nbsp;молоко высочайшего качества. Все ингредиенты и&nbsp;добавки произведены из&nbsp;натурального сырья.</li>
             <li class="about__item about__item--thermometer">Доставка нашего мороженого осуществляется в специальном термопаке, который не&nbsp;даёт мороженому растаять и&nbsp;позволяет сохранить превосходный вкус.</li>
           </ul>
@@ -286,11 +286,11 @@
           <div class="subscribe__wrapper">
             <h2 class="visually-hidden">Подписка на рассылку.</h2>
             <form class="subscribe__form form" action="https://echo.htmlacademy.ru/" method="post">
-              <p class="form__description">Подпишитесь на нашу сладкую рассылку и будьте всегда в курсе всего самого вкусного, что у нас происходит.
+              <p class="form__description">Подпишитесь на нашу сладкую рассылку и будьте всегда в&nbsp;курсе всего самого вкусного, что у нас происходит.
                 Обещаем не спамить и не слать всякой ненужной ерунды. Честно =)</p>
               <div class="subscribe__bottom">
                 <label class="visually-hidden" for="subscribe-email">Введите email</label>
-                <input class="form__input" type="email" id="subscribe-email" name="subscribe-email" placeholder="email@example.com">
+                <input class="form__input" type="email" id="subscribe-email" name="subscribe-email" placeholder="email@example.com" required>
                 <button class="button button--primary" type="submit">Отправить</button>
               </div>
             </form>
@@ -300,10 +300,10 @@
       <section id="delivery" class="delivery">
         <div class="delivery__wrapper">
           <h2 class="delivery__title title">Доставка любимого мороженого на дом</h2>
-          <p class="delivery__description">Хочется полакомиться любимым десертом, но нет времени съездить в магазин? Закажите доставку мороженого на дом, и курьер привезёт вам ваш заказ в течение часа!</p>
+          <p class="delivery__description">Хочется полакомиться любимым десертом, но&nbsp;нет времени съездить в магазин? Закажите доставку мороженого на дом, и курьер привезёт вам ваш заказ в течение часа!</p>
         </div>
         <form class="delivery__form form" action="https://echo.htmlacademy.ru/" method="post" >
-          <p class="delivery__caption form__description">Укажите адрес и дату доставки, и мы свяжемся с вами, чтобы подтвердить заказ.</p>
+          <p class="delivery__caption form__description">Укажите адрес и дату доставки, и мы свяжемся с&nbsp;вами, чтобы подтвердить заказ.</p>
           <div class="delivery__date">
             <span class="form__label">
               <label class=" form__label--date" for="delivery-date">Дата </label>
@@ -316,11 +316,11 @@
                 <span class="tooltip-text" role="tooltip" id="tooltip-label-date">Введите дату</span>
               </span>
             </span>
-            <input class="form__input" type="text" id="delivery-date" name="delivery-date" placeholder="01.04.2020"  >
+            <input class="form__input" type="text" id="delivery-date" name="delivery-date" placeholder="01.04.2020" required>
           </div>
           <div class="delivery__phone">
             <label class="form__label" for="delivery-phone">Телефон </label>
-            <input class="form__input" type="tel" id="delivery-phone" name="delivery-phone" placeholder="+7 800 999-00-00">
+            <input class="form__input" type="tel" id="delivery-phone" name="delivery-phone" placeholder="+7 800 999-00-00" required>
           </div>
           <div class="delivery__address">
             <span class="form__label">
@@ -334,7 +334,7 @@
                 <span class="tooltip-text" role="tooltip" id="tooltip-label-address">Введите название улицы, дома и квартиры</span>
               </span>
             </span>
-            <input class="form__input" type="text" id="delivery-address" name="delivery-address" placeholder="ул. Большая Конюшенная, 19/8">
+            <input class="form__input" type="text" id="delivery-address" name="delivery-address" placeholder="ул. Большая Конюшенная, 19/8" required>
           </div>
           <button class="delivery__button button button--primary" type="submit">Отправить</button>
         </form>
@@ -402,15 +402,15 @@
   </div>
   <div class="modal modal--closed">
     <div class="modal__wrapper">
-      <button class="modal__button"><span class="visually-hidden">Закрыть окно</span></button>
+      <button class="modal__button" type="button"><span class="visually-hidden">Закрыть окно</span></button>
       <form class="form modal-form" action="https://echo.htmlacademy.ru/" method="post">
         <p class="form__title form__title--modal">Мы обязательно ответим вам!</p>
         <label class="visually-hidden" for="feedback-name">Введите Имя и Фамилию</label>
-        <input class="form__input" type="text" id="feedback-name" name="feedback-name" placeholder="Имя и фамилия">
+        <input class="form__input" type="text" id="feedback-name" name="feedback-name" placeholder="Имя и фамилия" required>
         <label class="visually-hidden" for="feedback-email">Введите email</label>
-        <input class="form__input" type="email" id="feedback-email" name="feedback-email" placeholder="email@example.com">
+        <input class="form__input" type="email" id="feedback-email" name="feedback-email" placeholder="email@example.com" required>
         <label class="visually-hidden" for="feedback-message">Напишите сообщение</label>
-        <textarea class="form__textarea" id="feedback-message" name="feedback-message" placeholder="В свободной форме"></textarea>
+        <textarea class="form__textarea" id="feedback-message" name="feedback-message" placeholder="В свободной форме" required></textarea>
         <button class="form__button button button--primary" type="submit">Отправить</button>
       </form>
     </div>
